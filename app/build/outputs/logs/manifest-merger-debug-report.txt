@@ -1,0 +1,217 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:2:1-130:12
+	package
+		ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:3:5-35
+		INJECTED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml
+	android:versionName
+		ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:5:5-30
+		INJECTED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml
+	android:versionCode
+		ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:4:5-29
+		INJECTED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:2:11-69
+uses-sdk
+ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:7:5-43
+MERGED from [PowerTutor-master1:GraphView-master:unspecified] D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\build\intermediates\exploded-aar\PowerTutor-master1\GraphView-master\unspecified\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:support-v4:22.2.0] D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-appindexing:8.1.0] D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.1.0\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-basement:8.1.0] D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.1.0\AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:support-v4:22.2.0] D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:20:5-43
+	android:targetSdkVersion
+		INJECTED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:7:15-40
+		INJECTED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.INTERNET
+ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:9:5-67
+	android:name
+		ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:9:22-64
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:10:5-79
+	android:name
+		ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:10:22-76
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:11:5-76
+	android:name
+		ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:11:22-73
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:12:5-75
+	android:name
+		ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:12:22-72
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:13:5-79
+	android:name
+		ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:13:22-76
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:14:5-81
+	android:name
+		ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:14:22-78
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:15:5-81
+	android:name
+		ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:15:22-78
+application
+ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:17:5-128:19
+MERGED from [PowerTutor-master1:GraphView-master:unspecified] D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\build\intermediates\exploded-aar\PowerTutor-master1\GraphView-master\unspecified\AndroidManifest.xml:11:5-12:19
+MERGED from [com.android.support:support-v4:22.2.0] D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-appindexing:8.1.0] D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.1.0\AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-basement:8.1.0] D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.1.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:22.2.0] D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:22:5-20
+	android:label
+		ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:19:9-41
+	android:icon
+		ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:18:9-38
+activity#edu.umich.PowerTutor.ui.UMLogger
+ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:20:9-29:20
+	android:screenOrientation
+		ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:23:13-49
+	android:label
+		ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:22:13-45
+	android:name
+		ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:21:13-40
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:24:13-28:29
+action#android.intent.action.MAIN
+ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:25:17-69
+	android:name
+		ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:25:25-66
+category#android.intent.category.LAUNCHER
+ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:27:17-77
+	android:name
+		ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:27:27-74
+activity#edu.umich.PowerTutor.ui.Help
+ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:30:9-34:20
+	android:name
+		ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:30:19-42
+intent-filter#android.intent.action.MAIN
+ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:31:13-33:29
+activity#edu.umich.PowerTutor.ui.PowerViewer
+ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:35:9-39:20
+	android:name
+		ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:35:19-49
+activity#edu.umich.PowerTutor.ui.PowerTop
+ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:40:9-46:20
+	android:label
+		ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:42:13-38
+	android:name
+		ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:41:13-40
+activity#edu.umich.PowerTutor.ui.PowerPie
+ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:47:9-51:20
+	android:name
+		ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:47:19-46
+activity#edu.umich.PowerTutor.ui.MiscView
+ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:52:9-56:20
+	android:name
+		ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:52:19-46
+activity#edu.umich.PowerTutor.ui.PowerTabs
+ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:57:9-63:20
+	android:theme
+		ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:59:13-60
+	android:name
+		ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:58:13-41
+activity#edu.umich.PowerTutor.ui.EditPreferences
+ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:64:9-70:20
+	android:label
+		ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:66:13-47
+	android:name
+		ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:65:13-47
+activity#edu.umich.PowerTutor.ui.ViewerPreferences
+ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:71:9-77:20
+	android:label
+		ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:73:13-55
+	android:name
+		ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:72:13-49
+activity#edu.umich.PowerTutor.widget.Configure
+ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:78:9-84:20
+	android:label
+		ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:80:13-56
+	android:name
+		ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:79:13-45
+intent-filter#android.appwidget.action.APPWIDGET_CONFIGURE
+ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:81:13-83:29
+action#android.appwidget.action.APPWIDGET_CONFIGURE
+ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:82:17-87
+	android:name
+		ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:82:25-84
+activity#edu.umich.PowerTutor.widget.DataSourceConfigure
+ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:85:9-91:20
+	android:label
+		ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:87:13-50
+	android:name
+		ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:86:13-55
+receiver#edu.umich.PowerTutor.ui.StartupReceiver
+ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:93:9-99:20
+	android:name
+		ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:93:19-53
+intent-filter#android.intent.action.BOOT_COMPLETED+android.intent.category.HOME
+ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:94:13-98:29
+action#android.intent.action.BOOT_COMPLETED
+ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:95:17-79
+	android:name
+		ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:95:25-76
+category#android.intent.category.HOME
+ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:97:17-73
+	android:name
+		ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:97:27-70
+service#edu.umich.PowerTutor.service.UMLoggerService
+ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:101:9-60
+	android:name
+		ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:101:18-57
+receiver#edu.umich.PowerTutor.widget.PowerWidget
+ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:103:9-111:20
+	android:name
+		ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:103:19-53
+intent-filter#android.appwidget.action.APPWIDGET_UPDATE
+ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:104:13-106:29
+action#android.appwidget.action.APPWIDGET_UPDATE
+ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:105:17-84
+	android:name
+		ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:105:25-81
+meta-data#android.appwidget.provider
+ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:108:13-110:55
+	android:resource
+		ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:110:17-52
+	android:name
+		ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:109:17-58
+activity#edu.umich.PowerTutor.ui.escolha_apps
+ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:113:9-53
+	android:name
+		ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:113:19-50
+activity#edu.umich.PowerTutor.ui.Aplicacoes
+ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:114:9-51
+	android:name
+		ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:114:19-48
+activity#edu.umich.PowerTutor.ui.TesteT
+ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:115:9-47
+	android:name
+		ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:115:19-44
+activity#edu.umich.PowerTutor.ui.graficos_resultados
+ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:116:9-60
+	android:name
+		ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:116:19-57
+activity#edu.umich.PowerTutor.ui.preferencias_execucao_teste
+ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:117:9-68
+	android:name
+		ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:117:19-65
+activity#edu.umich.PowerTutor.ui.MainActivity
+ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:118:9-53
+	android:name
+		ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:118:19-50
+meta-data#com.google.android.gms.version
+ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:123:9-125:69
+MERGED from [com.google.android.gms:play-services-basement:8.1.0] D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.1.0\AndroidManifest.xml:21:9-23:69
+	android:value
+		ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:125:13-66
+	android:name
+		ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:124:13-58
+activity#edu.umich.PowerTutor.ui.resultados_teste_01_app
+ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:127:9-73
+	android:name
+		ADDED from D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\src\main\AndroidManifest.xml:127:19-61

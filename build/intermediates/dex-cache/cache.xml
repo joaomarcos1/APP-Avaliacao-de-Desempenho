@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.1.0\jars\classes.jar"
+        jumboMode="true"
+        revision="25.0.0"
+        sha1="d0dda274b703dd9c5bb056867649d22b4171ae7d">
+        <dex dex="D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-basement-8.1.0_1c3f352e21297e24b81b4837898b3395c1adb358\classes.dex" />
+    </item>
+    <item
+        jar="D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\libs\internal_impl-22.2.0.jar"
+        jumboMode="true"
+        revision="25.0.0"
+        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
+        <dex dex="D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-22.2.0_ac38c1327f8887615486c4b9f3b45b1d740ec1b0\classes.dex" />
+    </item>
+    <item
+        jar="D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\libs\mpandroidchartlibrary-2-2-4.jar"
+        jumboMode="true"
+        revision="25.0.0"
+        sha1="e5455fb794bfcbeb75da252dffd907794614f7fd">
+        <dex dex="D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\build\intermediates\transforms\dex\debug\folders\1000\2\mpandroidchartlibrary-2-2-4_f382a1e0358509ce5c6282d25f714618997ee21a\classes.dex" />
+    </item>
+    <item
+        jar="C:\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.0\support-annotations-22.2.0.jar"
+        jumboMode="true"
+        revision="25.0.0"
+        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
+        <dex dex="D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-22.2.0_70ba567356d3f4e70248bb87208265e9c5e15549\classes.dex" />
+    </item>
+    <item
+        jar="D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="25.0.0"
+        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
+        <dex dex="D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-22.2.0_61f14bd2322c761711d2fc9926af97bcd75af83b\classes.dex" />
+    </item>
+    <item
+        jar="D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.1.0\jars\classes.jar"
+        jumboMode="true"
+        revision="25.0.0"
+        sha1="4477ea44f5ec5ad064022a22691732d7638ff197">
+        <dex dex="D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-appindexing-8.1.0_bd0c0d125d3226c7682714317dacc17a8ec62653\classes.dex" />
+    </item>
+    <item
+        jar="D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\libs\achartengine-1.0.0.jar"
+        jumboMode="true"
+        revision="25.0.0"
+        sha1="b2bb0af9f390c0edd4d7d95f613f38da3abe0144">
+        <dex dex="D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\build\intermediates\transforms\dex\debug\folders\1000\2\achartengine-1.0.0_975188ed17a66a448bb7288f49d52148e3bc729b\classes.dex" />
+    </item>
+    <item
+        jar="D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="25.0.0"
+        sha1="c09bb8d5671b8dc8b559758fe829615c236bb90e">
+        <dex dex="D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_ad1660f9f7f86228b2010559fb4290a16fbaba3c\classes.dex" />
+    </item>
+    <item
+        jar="D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\libs\commons-math3-3.6.1.jar"
+        jumboMode="true"
+        revision="25.0.0"
+        sha1="e4ba98f1d4b3c80ec46392f25e094a6a2e58fcbf">
+        <dex dex="D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\build\intermediates\transforms\dex\debug\folders\1000\2\commons-math3-3.6.1_f0e84eac915d5cb76900453a60a04dade2afd4ef\classes.dex" />
+    </item>
+    <item
+        jar="D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        revision="25.0.0"
+        sha1="4b73423e5dc6430c9b2b4830bce3ae285707def7">
+        <dex dex="D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_ae5d02652df93054ea8843041b060aa1c49682b9\classes.dex" />
+    </item>
+
+</items>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background = "@drawable/background"
+  >
+
+
+
+    <LinearLayout
+      android:orientation="vertical"
+      android:layout_width="0px"
+      android:layout_height="fill_parent"
+      android:layout_weight="3"
+
+    >
+
+        <TextView
+            android:textSize="25pt"
+            android:layout_width="159dp"
+            android:layout_height="119dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Nome APP"
+            android:id="@+id/textView4"
+            android:layout_gravity="center_horizontal" />
+
+        <Button android:id="@+id/servicestartbutton"
+          android:layout_width="225dp"
+          android:layout_height="58dp"
+          android:layout_marginTop="120dp"
+          android:textSize="10pt"
+          android:layout_gravity="center"
+          android:text="Iniciar Serviço"
+          />
+      <Button android:id="@+id/appviewerbutton"
+          android:text="Teste de Aplicativos"
+          android:layout_width="225dp"
+          android:layout_height="58dp"
+          android:textSize="8pt"
+          android:layout_gravity="center_horizontal" />
+
+      <Button android:id="@+id/sysviewerbutton"
+          android:text="Informações do Sistema"
+          android:layout_width="225dp"
+          android:layout_height="65dp"
+          android:textSize="8pt"
+          android:layout_gravity="center_horizontal" />
+
+
+  </LinearLayout>
+
+</LinearLayout>
+

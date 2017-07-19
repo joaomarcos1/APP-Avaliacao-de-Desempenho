@@ -1,0 +1,29 @@
+apply plugin: 'com.android.application'
+android {
+    compileSdkVersion 10
+    buildToolsVersion '25.0.0'
+
+    defaultConfig {
+        applicationId "edu.umich.PowerTutor"
+        minSdkVersion 10
+        targetSdkVersion 10
+
+        ndk {
+            moduleName "bindings"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+dependencies {
+    compile files('libs/achartengine-1.0.0.jar')
+    compile files('libs/commons-math3-3.6.1.jar')
+    compile project(path: ':GraphView-master')
+    compile files('libs/mpandroidchartlibrary-2-2-4.jar')
+    compile 'com.google.android.gms:play-services-appindexing:8.1.0'
+}
