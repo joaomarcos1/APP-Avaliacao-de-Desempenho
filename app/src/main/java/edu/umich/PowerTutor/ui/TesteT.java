@@ -67,7 +67,10 @@ public class TesteT extends Activity {
     private TextView desvioPadraoAPP02;
 
     private TextView resultado_TesteT;
+    ArrayList<String> nomes_APPS = new ArrayList<String>();
 
+    private TextView nomeAPP01;
+    private TextView nomeAPP02;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,10 +96,9 @@ public class TesteT extends Activity {
 
         resultado_TesteT = (TextView) findViewById(R.id.txt_resultadoTesteT);
 
+        nomeAPP01 = (TextView) findViewById(R.id.txt_Nome_APP_01);
 
-
-
-
+        nomeAPP02 = (TextView) findViewById(R.id.txt_Nome_APP_02);
 
 
         Bundle bnd = getIntent().getExtras();
@@ -110,6 +112,13 @@ public class TesteT extends Activity {
             somaAPP02 = (ArrayList<Double>)getIntent().getExtras().getSerializable("app02");
         }
 
+        if (bnd.containsKey("NOMES_APPS")){
+            nomes_APPS = bnd.getStringArrayList("NOMES_APPS");
+        }
+
+        nomeAPP01.setText(nomes_APPS.get(0));
+
+        nomeAPP02.setText(nomes_APPS.get(1));
 
         StringBuilder stb1 = new StringBuilder();
         StringBuilder stb2 = new StringBuilder();

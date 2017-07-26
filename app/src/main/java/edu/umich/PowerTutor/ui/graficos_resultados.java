@@ -13,6 +13,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 
@@ -40,6 +41,18 @@ import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.auth.api.credentials.internal.SaveRequest;
 import com.google.android.gms.common.api.GoogleApiClient;
 
+import org.apache.http.HttpResponse;
+import org.apache.http.NameValuePair;
+import org.apache.http.ParseException;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.message.BasicNameValuePair;
+import org.apache.http.util.EntityUtils;
+
+import java.io.IOException;
 import java.util.ArrayList;
 
 import edu.umich.PowerTutor.R;
@@ -52,11 +65,14 @@ public class graficos_resultados extends Activity {
     ArrayList<Double> somasAPP02 = new ArrayList<Double>();
 
     CharSequence opcoesInformacoes[] = {"Consumo Energético", "Desvios Padrão", "Variancia", "Média", "Moda", "Mediana"};
-    /**
-     * ATTENTION: This was auto-generated to implement the App Indexing API.
-     * See https://g.co/AppIndexing/AndroidStudio for more information.
-     */
 
+    private Button SalvarRelatorio;
+    private Button SalvarGraficos;
+
+    CandleStickChart candleStickChart;
+    BarChart barChart;
+
+    String nomeImagem01, nomeImagem02;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,6 +88,34 @@ public class graficos_resultados extends Activity {
                 finish();
             }
         });
+
+
+        SalvarGraficos = (Button) findViewById(R.id.btn_Salvar_Graficos_TesteT);
+
+        SalvarGraficos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                nomeImagem01 = "grap1"+ System.currentTimeMillis();
+                nomeImagem02 = "grap2"+ System.currentTimeMillis();
+                if (barChart.saveToGallery(nomeImagem01, 50) && candleStickChart.saveToGallery(nomeImagem02, 50)) {
+
+                    Toast.makeText(getApplicationContext(), "Saving SUCCESSFUL!",
+                            Toast.LENGTH_SHORT).show();
+                } else
+                    Toast.makeText(getApplicationContext(), "Saving FAILED!", Toast.LENGTH_SHORT)
+                            .show();
+            }
+        });
+
+        SalvarRelatorio = (Button) findViewById(R.id.btn_Salvar_Relatorios__TesteT);
+        SalvarRelatorio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(graficos_resultados.this, "Gerando Relatório Completo!", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
 
         Bundle bnd = getIntent().getExtras();
 
@@ -108,7 +152,7 @@ public class graficos_resultados extends Activity {
         }
 
 
-        CandleStickChart candleStickChart = (CandleStickChart) findViewById(R.id.chart);
+        candleStickChart = (CandleStickChart) findViewById(R.id.chart);
 
 
         ArrayList<CandleEntry> entries = new ArrayList<CandleEntry>();
@@ -133,15 +177,15 @@ public class graficos_resultados extends Activity {
 
         //Gráfico de Barras
 
-        //1º PAsso
-        BarChart barChart = (BarChart) findViewById(R.id.chart2);
+        //1º Passo
+        barChart = (BarChart) findViewById(R.id.chart2);
         ArrayList<BarEntry> entrada = new ArrayList<BarEntry>();
         for (int i = 0; i < somasAPP01.size(); i++){
             entrada.add(new BarEntry(somasAPP01.get(i).floatValue(), i));
         }
 
 
-        //2º PAsso
+        //2º Passo
         BarDataSet dataSet = new BarDataSet(entrada, "Legenda TEste");
 
         ArrayList<String> legends = new ArrayList<String>();
@@ -163,6 +207,63 @@ public class graficos_resultados extends Activity {
     }
 
 
+
+
+
+
+
+/*
+
+    public void enviarDados(View view){
+
+
+        new Thread(){
+            public void run(){
+                EditText nEt = (EditText) findViewById(R.id.nome);
+                EditText sEt = (EditText) findViewById(R.id.sobrenome);
+                EditText eEt = (EditText) findViewById(R.id.email);
+
+                postHttp(nEt.getText().toString(), sEt.getText().toString(), eEt.getText().toString());
+            }
+        }.start();
+
+    }
+
+    public void postHttp(String nome, String sobrenome, String email){
+        HttpClient httpClient = new DefaultHttpClient();
+        HttpPost httpPost = new HttpPost("http://www.villopim.com.br/android/teste/server.php");
+
+        try{
+            ArrayList<NameValuePair> valores = new ArrayList<NameValuePair>();
+            valores.add(new BasicNameValuePair("nome", nome));
+            valores.add(new BasicNameValuePair("sobrenome", sobrenome));
+            valores.add(new BasicNameValuePair("email", email));
+
+            httpPost.setEntity(new UrlEncodedFormEntity(valores));
+            final HttpResponse resposta = httpClient.execute(httpPost);
+
+            runOnUiThread(new Runnable(){
+                public void run(){
+                    try {
+                        Toast.makeText(getBaseContext(), EntityUtils.toString(resposta.getEntity()), Toast.LENGTH_SHORT).show();
+                    } catch (ParseException e) {
+                        // TODO Auto-generated catch block
+                        e.printStackTrace();
+                    } catch (IOException e) {
+                        // TODO Auto-generated catch block
+                        e.printStackTrace();
+                    }
+                }
+            });
+        }
+        catch(ClientProtocolException e){}
+        catch(IOException e){}
+    }
+
+
+
+
+*/
 
     public boolean onCreateOptionsMenu(Menu menu) {
         menu.add(0, 01, 0, "Escolher Gráficos");

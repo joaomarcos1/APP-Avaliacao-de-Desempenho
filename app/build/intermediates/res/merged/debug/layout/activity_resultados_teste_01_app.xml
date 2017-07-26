@@ -17,7 +17,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Aplicativo "
         android:textSize="18pt"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="0dp"
         android:id="@+id/txt_Nome_APP_TESTE_01_APP"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true" />
@@ -29,8 +29,7 @@
         android:text="Média:"
         android:id="@+id/textView8"
         android:layout_below="@+id/txt_Nome_APP_TESTE_01_APP"
-        android:layout_alignParentLeft="true"
-        android:layout_marginTop="20dp" />
+        android:layout_alignParentLeft="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -85,10 +84,11 @@
     <com.github.mikephil.charting.charts.BarChart
         android:id="@+id/chart_teste_01_app"
         android:layout_width="match_parent"
-        android:layout_height="240dp"
+        android:layout_height="200dp"
         android:layout_below="@+id/textView13"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="15dp" />
+        android:layout_marginTop="20dp"
+        android:layout_above="@+id/btn_voltar_teste_01_app" />
 
     <Button
         android:layout_width="wrap_content"
@@ -97,6 +97,24 @@
         android:id="@+id/btn_voltar_teste_01_app"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignRight="@+id/chart_teste_01_app" />
+        android:layout_alignParentRight="true" />
+<!--
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Salvar Gráfico"
+        android:id="@+id/btn_Salvamento_Grafico"
+        android:layout_above="@+id/btn_Salvamento_Relatorio"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Salvar Relatório"
+        android:id="@+id/btn_Salvamento_Relatorio"
+        android:layout_above="@+id/btn_voltar_teste_01_app"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true" />-->
 
 </RelativeLayout>

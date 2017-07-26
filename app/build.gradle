@@ -26,4 +26,7 @@ dependencies {
     compile project(path: ':GraphView-master')
     compile files('libs/mpandroidchartlibrary-2-2-4.jar')
     compile 'com.google.android.gms:play-services-appindexing:8.1.0'
+    compile files('libs/apache-mime4j-0.6.jar')
+    compile files('libs/httpmime-4.1.1.jar')
+    compile files('libs/itextg-5.5.8.jar')
 }

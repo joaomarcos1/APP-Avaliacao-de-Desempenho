@@ -668,6 +668,7 @@ public class PowerTop extends Activity implements Runnable {
 
                       it.putExtra("app01", SomaAplicativo01);
                       it.putExtra("app02", SomaAplicativo02);
+                      it.putExtra("NOMES_APPS", itens);
                       if (cont3 < 1) {
                           stopService(serviceIntent);
                       /*super.onPause();
