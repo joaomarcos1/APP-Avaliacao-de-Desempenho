@@ -134,9 +134,12 @@ public class PowerTop extends Activity implements Runnable {
 
 
     boolean condicaoSalvar;
+
     long tempoObservacao;
 
     int quantidade_apps = 0;
+
+
 
   @Override
   public void onCreate(Bundle savedInstanceState) {
@@ -170,6 +173,11 @@ public class PowerTop extends Activity implements Runnable {
     if (bnd.containsKey("QUANTIDADE_APPS")){
         quantidade_apps = bnd.getInt("QUANTIDADE_APPS");
     }
+
+
+      if (bnd.containsKey("CONDICAO_SALVAR")){
+          condicaoSalvar = bnd.getBoolean("CONDICAO_SALVAR");
+      }
 
     if (bnd.containsKey("VALOR")) {
       itens = bnd.getStringArrayList("VALOR");
@@ -567,9 +575,17 @@ public class PowerTop extends Activity implements Runnable {
 
 
                       if (tempoObservacao >= (tempo_escolhido / observacao_escolhida)) {
-                          powerView.init(uidInfos[i], keyId, itens.get(0), 01, true);
+                          if (condicaoSalvar == true){
+                              powerView.init(uidInfos[i], keyId, itens.get(0), 01, true);
+                          }else
+                              powerView.init(uidInfos[i], keyId, itens.get(0), 01, false);
+
                           tempoObservacao = 0;
                       } else {
+                          if (condicaoSalvar == true){
+                              powerView.init(uidInfos[i], keyId, itens.get(0), 01, true);
+                          }else
+                              powerView.init(uidInfos[i], keyId, itens.get(0), 01, false);
                           powerView.init(uidInfos[i], keyId, itens.get(0), 01, false);
                       }
                       sz++;
@@ -618,10 +634,17 @@ public class PowerTop extends Activity implements Runnable {
 
 
                           if (tempoObservacao >= (tempo_escolhido / observacao_escolhida)) {
-                              powerView.init(uidInfos[i], keyId, itens.get(0), 01, true);
+                              if (condicaoSalvar == true) {
+                                  powerView.init(uidInfos[i], keyId, itens.get(0), 01, true);
+                              }else
+                                  powerView.init(uidInfos[i], keyId, itens.get(0), 01, false);
+
                               tempoObservacao = 0;
                           } else {
-                              powerView.init(uidInfos[i], keyId, itens.get(0), 01, false);
+                              if (condicaoSalvar == true) {
+                                  powerView.init(uidInfos[i], keyId, itens.get(0), 01, true);
+                              }else
+                                  powerView.init(uidInfos[i], keyId, itens.get(0), 01, false);
                           }
                           sz++;
                       } else if (atual1 >= tempoTotal) {
@@ -667,10 +690,20 @@ public class PowerTop extends Activity implements Runnable {
 
 
                           if (tempoObservacao >= (tempo_escolhido / observacao_escolhida)) {
-                              powerView.init(uidInfos[i], keyId, itens.get(1), 02, true);
+                              if (condicaoSalvar == true){
+                                  powerView.init(uidInfos[i], keyId, itens.get(1), 02, true);
+                              }else
+                                  powerView.init(uidInfos[i], keyId, itens.get(1), 02, false);
+
                               tempoObservacao = 0;
+
                           } else {
-                              powerView.init(uidInfos[i], keyId, itens.get(1), 02, false);
+                              if (condicaoSalvar == true){
+                                  powerView.init(uidInfos[i], keyId, itens.get(1), 02, true);
+                              }else
+                                  powerView.init(uidInfos[i], keyId, itens.get(1), 02, false);
+
+
                           }
                           //powerView.init(uidInfos[i], keyId, itens.get(1), 02);
                           sz++;
@@ -981,6 +1014,16 @@ public class PowerTop extends Activity implements Runnable {
 
               //Toast.makeText(getContext(), "Feito!", Toast.LENGTH_SHORT).show();
               ini.clear();
+          }else{
+              for (int i = 0; i < ini.size(); i++) {
+                  somaConsumoTotal += ini.get(i);
+              }
+
+              if (condicao == 01) {
+                  SomaAplicativo01.add(somaConsumoTotal);
+              } else
+                  SomaAplicativo02.add(somaConsumoTotal);
+
           }
 
 

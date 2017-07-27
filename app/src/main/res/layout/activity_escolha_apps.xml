@@ -15,9 +15,9 @@
         android:choiceMode="multipleChoice"
         android:layout_alignParentLeft="true"
         android:layout_above="@+id/btn_voltar_logs_apps"
-        android:layout_alignRight="@+id/btn_voltar_logs_apps"
         android:layout_marginBottom="53dp"
-        android:layout_marginTop="45dp" />
+        android:layout_marginTop="45dp"
+        android:layout_alignParentRight="true" />
 
     <Button
         android:layout_width="wrap_content"
@@ -25,8 +25,8 @@
         android:text="@string/voltar_tela_log_aps"
         android:id="@+id/btn_voltar_logs_apps"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentLeft="true" />
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/chk_SalvarDadosEmLOG_TelaSelecaoDeAPPS" />
 
     <Button
         android:layout_width="match_parent"
@@ -44,4 +44,13 @@
         android:id="@+id/textView"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Salvar Dados em LOG"
+        android:id="@+id/chk_SalvarDadosEmLOG_TelaSelecaoDeAPPS"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/btn_confirmar"
+        android:checked="false" />
 </RelativeLayout>

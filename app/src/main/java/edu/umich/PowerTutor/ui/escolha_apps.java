@@ -14,6 +14,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -51,9 +53,11 @@ public class escolha_apps extends Activity{
     private ListView lista_aplicativos;
     private Button voltar;
     private Button confirmar_apps;
+    private CheckBox salvarDados;
 
     int contador_apps = 0;
 
+    boolean condicaoSalvar = false;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -63,6 +67,22 @@ public class escolha_apps extends Activity{
 
         confirmar_apps = (Button) findViewById(R.id.btn_confirmar);
         voltar = (Button) findViewById(R.id.btn_voltar_logs_apps);
+        salvarDados = (CheckBox) findViewById(R.id.chk_SalvarDadosEmLOG_TelaSelecaoDeAPPS);
+
+        salvarDados.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+                    condicaoSalvar = true;
+                }else{
+                    condicaoSalvar = false;
+                }
+            }
+        });
+
+
+
+
         final ArrayList<String> opcoes = new ArrayList<String>();
         final ArrayList<String> salvaPacotes = new ArrayList<String>();
         PackageManager packageManager = getPackageManager();
@@ -129,6 +149,7 @@ public class escolha_apps extends Activity{
                     it.putExtra("VALOR2", pacotes);
                     it.putExtra("OBSERVACAO", observacao_escolhida);
                     it.putExtra("TEMPO", tempo_escolhido);
+                    it.putExtra("CONDICAO_SALVAR", condicaoSalvar);
                     finish();
                     startActivity(it);
 
