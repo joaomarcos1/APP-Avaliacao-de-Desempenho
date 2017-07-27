@@ -16,8 +16,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-
-
 /*
 import com.jjoe64.graphview.GraphView;
 import com.jjoe64.graphview.series.BarGraphSeries;
@@ -71,8 +69,11 @@ public class graficos_resultados extends Activity {
 
     CandleStickChart candleStickChart;
     BarChart barChart;
+    BarChart barChar2;
 
-    String nomeImagem01, nomeImagem02;
+    String nomeImagem01, nomeImagem02, nomeImagem03;
+
+    ArrayList<String> nomesAPPS = new ArrayList<String>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -97,7 +98,8 @@ public class graficos_resultados extends Activity {
             public void onClick(View view) {
                 nomeImagem01 = "grap1"+ System.currentTimeMillis();
                 nomeImagem02 = "grap2"+ System.currentTimeMillis();
-                if (barChart.saveToGallery(nomeImagem01, 50) && candleStickChart.saveToGallery(nomeImagem02, 50)) {
+                nomeImagem03 = "grap" + System.currentTimeMillis();
+                if (barChart.saveToGallery(nomeImagem01, 50) && candleStickChart.saveToGallery(nomeImagem02, 50) && barChar2.saveToGallery(nomeImagem03, 50)) {
 
                     Toast.makeText(getApplicationContext(), "Saving SUCCESSFUL!",
                             Toast.LENGTH_SHORT).show();
@@ -118,6 +120,11 @@ public class graficos_resultados extends Activity {
 
 
         Bundle bnd = getIntent().getExtras();
+
+
+        if(bnd.containsKey("NOMES_APPS")){
+            nomesAPPS = bnd.getStringArrayList("NOMES_APPS");
+        }
 
         if (bnd.containsKey("varianciaAPP01")) {
             varianciaAPP01 = bnd.getDouble("varianciaAPP01");
@@ -160,18 +167,18 @@ public class graficos_resultados extends Activity {
         entries.add(new CandleEntry(1, (float) varianciaAPP02, (float) (varianciaAPP02 - (0.90 * varianciaAPP02)), (float) (varianciaAPP02 - (varianciaAPP02 * 0.70)), (float) (varianciaAPP02 - (varianciaAPP02 * 0.30))));
 
 
-        CandleDataSet dataset = new CandleDataSet(entries, "Aplicativos (1 e 2, respectivamente)");
+        CandleDataSet dataset = new CandleDataSet(entries, nomesAPPS.get(0)+" e "+nomesAPPS.get(1)+ ", respectivamente");
 
         ArrayList<String> labels = new ArrayList<String>();
-        labels.add("Aplicativo 01");
-        labels.add("Aplicativo 02");
+        labels.add(nomesAPPS.get(0));
+        labels.add(nomesAPPS.get(1));
 
         CandleData data = new CandleData(labels, dataset);
         candleStickChart.setData(data);
         dataset.setColors(ColorTemplate.COLORFUL_COLORS); //
         candleStickChart.setDescription("Variâncias");
-        candleStickChart.animateY(3000);
-        candleStickChart.setBackgroundColor(Color.WHITE);
+        candleStickChart.animateY(2000);
+        candleStickChart.invalidate();
 
 
 
@@ -186,7 +193,7 @@ public class graficos_resultados extends Activity {
 
 
         //2º Passo
-        BarDataSet dataSet = new BarDataSet(entrada, "Legenda TEste");
+        BarDataSet dataSet = new BarDataSet(entrada, nomesAPPS.get(0));
 
         ArrayList<String> legends = new ArrayList<String>();
         for (int i = 0; i < somasAPP01.size(); i++){
@@ -198,11 +205,26 @@ public class graficos_resultados extends Activity {
         //3º Passo
 
         barChart.setData(dados);
-        barChart.setDescription("Teste 01");
+        barChart.setDescription("Consumo Energético "+ nomesAPPS.get(0));
         barChart.animateY(2000);
         barChart.invalidate();
 
 
+        barChar2 = (BarChart) findViewById(R.id.chart3);
+
+        ArrayList<BarEntry> entrada2 = new ArrayList<BarEntry>();
+        for (int i = 0; i < somasAPP02.size(); i++){
+            entrada2.add(new BarEntry(somasAPP02.get(i).floatValue(), i));
+        }
+
+        BarDataSet dataSet2 = new BarDataSet(entrada2, nomesAPPS.get(1));
+
+        BarData dados2 = new BarData(legends, dataSet2);
+
+        barChar2.setData(dados2);
+        barChar2.setDescription("Consumo Energético "+nomesAPPS.get(1));
+        barChar2.animateY(2000);
+        barChar2.invalidate();
 
     }
 
@@ -263,7 +285,7 @@ public class graficos_resultados extends Activity {
 
 
 
-*/
+
 
     public boolean onCreateOptionsMenu(Menu menu) {
         menu.add(0, 01, 0, "Escolher Gráficos");
@@ -309,7 +331,7 @@ public class graficos_resultados extends Activity {
 
         }
         return null;
-    }
+    }*/
 
 
 }

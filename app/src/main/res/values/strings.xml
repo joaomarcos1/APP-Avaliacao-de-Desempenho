@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="voltar_tela_log_aps">Voltar</string>
-    <string name="app_name">SAVADA</string>
+    <string name="app_name">APPCompare</string>
     <string name="running_on_startup">The Power Profiler will now run after your phone starts up.</string>
     <string name="not_running_on_startup">The Power Profiler will no longer run on when your phone starts up.</string>
     <string name="stop_sending_text">This application sends data on power utilization and running applications to the PowerTutor team. We gather nothing allowing us to associate the data with you or your phone; a cryptographically secure hash function is used to protect your identity.  Pressing \'Stop\' will prevent these data from being sent.</string>

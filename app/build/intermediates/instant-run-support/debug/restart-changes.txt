@@ -1,1 +1,0 @@
-CHANGED,D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\build\intermediates\transforms\instantRun\debug\folders\1\5\main\edu\umich\PowerTutor\ui\resultados_teste_01_app.class

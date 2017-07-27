@@ -292,8 +292,7 @@ public class resultados_teste_01_app extends Activity {
 
 
 
-                    document.add(new Chunk("Este relatori apresenta os resultados do reste T feito entre o App1 e o App2 os resultados " +
-                            "são expresos logo abaixo atraves do grafico."));
+                    document.add(new Chunk("Este Relatório apresenta os dados da avaliação do Aplicativo "+nome_APP+" e apresenta algumas informações estatíticas sobre o mesmo."));
 
                     //pega hora
 

@@ -4,35 +4,34 @@
     api-level="23"
     density="xhdpi"
     format="7"
-    timestamp="3783060107842"
-    verifier="COMPATIBLE" >
+    timestamp="73608524466379" >
 
     <task
         name="javac"
-        duration="1101" />
+        duration="0" />
     <task
         name="instant-run-dex"
-        duration="1244" />
+        duration="0" />
     <task
         name="instant-run-transform"
-        duration="35" />
+        duration="0" />
     <task
         name="verifier"
-        duration="3" />
+        duration="0" />
 
     <artifact
-        location="D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\build\intermediates\reload-dex\debug\classes.dex"
-        type="RELOAD_DEX" />
+        location="D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\build\intermediates\res\resources-debug.ap_"
+        type="RESOURCES" />
 
-    <build timestamp="3620147013597" >
+    <build timestamp="73146376743749" >
         <artifact
             location="D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
     </build>
-    <build timestamp="21569687079400" >
+    <build timestamp="73608524466379" >
         <artifact
-            location="D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_3\classes.dex"
-            type="DEX" />
+            location="D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\build\intermediates\res\resources-debug.ap_"
+            type="RESOURCES" />
     </build>
 
 </instant-run>

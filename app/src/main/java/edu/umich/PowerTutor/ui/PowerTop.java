@@ -574,8 +574,10 @@ public class PowerTop extends Activity implements Runnable {
                       }
                       sz++;
                   } else if (atual1 >= tempo_escolhido) {
+                      cont4 = 0;
                       finishActivity(1);//finalizar o único aplicativo aberto
                       stopService(serviceIntent);//Finalizar a service que faz a verificação de consumo de energi, que está rodando em segundo plano
+
                       Toast.makeText(PowerTop.this, "Abrir Tela Aplicativo Unico!", Toast.LENGTH_SHORT).show();
                       /// /startActivity(it);//abrir tela
                       Intent it0 = new Intent(PowerTop.this, resultados_teste_01_app.class);
@@ -586,105 +588,125 @@ public class PowerTop extends Activity implements Runnable {
                   }
               }
               }else if (quantidade_apps == 02) {
-                      if (app == 01) {
-                      atual1 = System.currentTimeMillis() - inicial1;
-                      tempoObservacao += 1000;
 
-                  if (atual1 < tempo_escolhido) {
-                      NotificationManager nm = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-                      Notification n = new Notification(R.drawable.icon, "thread1 -GERAL!- 60 segundos completos", System.currentTimeMillis());
-                      PendingIntent pend = PendingIntent.getActivity(this, 0, new Intent(this, UMLogger.class), 0);
-                      //n.setLatestEventInfo(this, titulo, mensagem, PendingIntent);
-                      n.setLatestEventInfo(PowerTop.this, "PowerTop - Condição 01", "1º APP  - Tempo: " + atual1, pend);
 
-                      nm.notify(R.drawable.icon, n);
-
-                      if (cont1 < 1) {
-                          Toast.makeText(PowerTop.this, "Iniciando Aplicativo 01!", Toast.LENGTH_SHORT).show();
-                          startActivity(it1);
-                          cont1++;
-                      }
-
-                      if (tempoObservacao >= (tempo_escolhido / observacao_escolhida)) {
-                          powerView.init(uidInfos[i], keyId, itens.get(0), 01, true);
-                          tempoObservacao = 0;
-                      } else {
-                          powerView.init(uidInfos[i], keyId, itens.get(0), 01, false);
-                      }
-                      sz++;
-                  } else if (atual1 >= tempoTotal) {
-                      app = 02;
-                      finishActivity(1);
-
+              if (app == 01) {
+                  if (cont1 < 1) {
+                      Toast.makeText(PowerTop.this, "Iniciando Aplicativo 01!", Toast.LENGTH_SHORT).show();
+                      startActivity(it1);
+                      cont1++;
                   }
 
-              } else {
+                  if (atual0 <= 5000) {
+                      atual0 = System.currentTimeMillis() - inicial1;
+                  } else {
+                      if (cont4 < 1){
+                          inicial1 = System.currentTimeMillis();
+                          cont4++;
+                      }
+                      atual1 = System.currentTimeMillis() - inicial1;
+                      tempoObservacao += 1000;
+                      if (atual1 < tempo_escolhido) {
+                          NotificationManager nm = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+                          Notification n = new Notification(R.drawable.icon, "thread1 -GERAL!- 60 segundos completos", System.currentTimeMillis());
+                          PendingIntent pend = PendingIntent.getActivity(this, 0, new Intent(this, UMLogger.class), 0);
+                          //n.setLatestEventInfo(this, titulo, mensagem, PendingIntent);
+                          n.setLatestEventInfo(PowerTop.this, "PowerTop - Condição 01", "1º APP  - Tempo: " + atual1, pend);
 
+                          nm.notify(R.drawable.icon, n);
+
+
+
+                          if (tempoObservacao >= (tempo_escolhido / observacao_escolhida)) {
+                              powerView.init(uidInfos[i], keyId, itens.get(0), 01, true);
+                              tempoObservacao = 0;
+                          } else {
+                              powerView.init(uidInfos[i], keyId, itens.get(0), 01, false);
+                          }
+                          sz++;
+                      } else if (atual1 >= tempoTotal) {
+                          app = 02;
+                          cont4 = 0;
+                          finishActivity(1);
+                      }
+                  }
+              } else {
+                  if (cont2 < 1) {//Abrir o aplicativo antes de pergar o momento inicial
+                      Toast.makeText(PowerTop.this, "Iniciando Aplicativo 02!", Toast.LENGTH_SHORT).show();
+                      startActivity(it2);
+                      cont2++;
+                  }
                   if (cont5 < 1) {
+                      atual0 = 0;
                       inicial2 = System.currentTimeMillis();
                       cont5++;
                   }
 
-                  atual2 = System.currentTimeMillis() - inicial2;
-                  tempoObservacao += 1000;
-
-                  if (atual2 < tempo_escolhido) {
-                      //if (atual >= (tempoTotal/2) && (atual <= tempoTotal)){
-
-                      NotificationManager nm1 = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-                      Notification n1 = new Notification(R.drawable.icon, "thread1 -GERAL!- 60 segundos completos", System.currentTimeMillis());
-                      PendingIntent pend1 = PendingIntent.getActivity(this, 0, new Intent(this, UMLogger.class), 0);
-                      //n.setLatestEventInfo(this, titulo, mensagem, PendingIntent);
-                      n1.setLatestEventInfo(PowerTop.this, "PowerTop - Condição 02", "2º APP - Tempo: " + atual2, pend1);
-                      nm1.notify(R.drawable.icon, n1);
-
-                      if (cont2 < 1) {
-                          Toast.makeText(PowerTop.this, "Iniciando Aplicativo 02!", Toast.LENGTH_SHORT).show();
-                          startActivity(it2);
-                          cont2++;
+                  if (atual0 <= 5000) {
+                      atual0 = System.currentTimeMillis() - inicial2;
+                  } else {
+                      if (cont4 < 1) {
+                          inicial2 = System.currentTimeMillis();
+                          cont4++;
                       }
 
+                      atual2 = System.currentTimeMillis() - inicial2;
+                      tempoObservacao += 1000;
 
-                      if (tempoObservacao >= (tempo_escolhido / observacao_escolhida)) {
-                          powerView.init(uidInfos[i], keyId, itens.get(1), 02, true);
-                          tempoObservacao = 0;
-                      } else {
-                          powerView.init(uidInfos[i], keyId, itens.get(1), 02, false);
+                      if (atual2 < tempo_escolhido) {
+                          //if (atual >= (tempoTotal/2) && (atual <= tempoTotal)){
+
+                          NotificationManager nm1 = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+                          Notification n1 = new Notification(R.drawable.icon, "thread1 -GERAL!- 60 segundos completos", System.currentTimeMillis());
+                          PendingIntent pend1 = PendingIntent.getActivity(this, 0, new Intent(this, UMLogger.class), 0);
+                          //n.setLatestEventInfo(this, titulo, mensagem, PendingIntent);
+                          n1.setLatestEventInfo(PowerTop.this, "PowerTop - Condição 02", "2º APP - Tempo: " + atual2, pend1);
+                          nm1.notify(R.drawable.icon, n1);
+
+
+
+
+                          if (tempoObservacao >= (tempo_escolhido / observacao_escolhida)) {
+                              powerView.init(uidInfos[i], keyId, itens.get(1), 02, true);
+                              tempoObservacao = 0;
+                          } else {
+                              powerView.init(uidInfos[i], keyId, itens.get(1), 02, false);
+                          }
+                          //powerView.init(uidInfos[i], keyId, itens.get(1), 02);
+                          sz++;
+
+
+                      } else if (atual2 >= tempo_escolhido) {
+                          finishActivity(1);
+                          NotificationManager nm = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+                          Notification n = new Notification(R.drawable.icon, "thread1 -GERAL!- 60 segundos completos", System.currentTimeMillis());
+                          PendingIntent pend = PendingIntent.getActivity(this, 0, new Intent(this, UMLogger.class), 0);
+                          //n.setLatestEventInfo(this, titulo, mensagem, PendingIntent);
+                          n.setLatestEventInfo(PowerTop.this, "Finalizado!", "Tempo Limite Atingido!", pend);
+                          nm.notify(R.drawable.icon, n);
+                          finishActivity(1);
+
+
+                          it.putExtra("app01", SomaAplicativo01);
+                          it.putExtra("app02", SomaAplicativo02);
+                          it.putExtra("NOMES_APPS", itens);
+                          if (cont3 < 1) {
+                              stopService(serviceIntent);
+                                  /*super.onPause();
+                                  getApplicationContext().unbindService(conn);
+                                  handler.removeCallbacks(this);
+                                  handler = null;*/
+                              startActivity(it);
+                              Toast.makeText(PowerTop.this, "Condição. Abrir Tela Teste T", Toast.LENGTH_SHORT).show();
+                              cont3++;
+                          }
+
+
+                          //powerView.init(uidInfos[i], keyId, itens.get(1), 02);
+                          //sz++;
                       }
-                      //powerView.init(uidInfos[i], keyId, itens.get(1), 02);
-                      sz++;
 
-
-                  } else if (atual2 >= tempo_escolhido) {
-                      finishActivity(1);
-                      NotificationManager nm = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-                      Notification n = new Notification(R.drawable.icon, "thread1 -GERAL!- 60 segundos completos", System.currentTimeMillis());
-                      PendingIntent pend = PendingIntent.getActivity(this, 0, new Intent(this, UMLogger.class), 0);
-                      //n.setLatestEventInfo(this, titulo, mensagem, PendingIntent);
-                      n.setLatestEventInfo(PowerTop.this, "Finalizado!", "Tempo Limite Atingido!", pend);
-                      nm.notify(R.drawable.icon, n);
-                      finishActivity(1);
-
-
-                      it.putExtra("app01", SomaAplicativo01);
-                      it.putExtra("app02", SomaAplicativo02);
-                      it.putExtra("NOMES_APPS", itens);
-                      if (cont3 < 1) {
-                          stopService(serviceIntent);
-                      /*super.onPause();
-                      getApplicationContext().unbindService(conn);
-                      handler.removeCallbacks(this);
-                      handler = null;*/
-                          startActivity(it);
-                          Toast.makeText(PowerTop.this, "Condição. Abrir Tela Teste T", Toast.LENGTH_SHORT).show();
-                          cont3++;
-                      }
-
-
-                      //powerView.init(uidInfos[i], keyId, itens.get(1), 02);
-                      //sz++;
                   }
-
               }
           }
 
@@ -919,14 +941,24 @@ public class PowerTop extends Activity implements Runnable {
           if(unidade.contains("m")){
             valor = Double.valueOf(vals).doubleValue();
             valor = valor/1000;
-            vfim = valor - temp;
-            temp = valor;
+              if (ini.size() == 0){
+                  vfim = valor;
+              }else {
+                  vfim = valor - temp;
+                  temp = valor;
+              }
+            //vfim = valor - temp;
+            //temp = valor;
             ini.add(vfim);
             //MiliJoule
           }else {
             valor = Double.valueOf(vals).doubleValue();
-            vfim = valor - temp;
-            temp = valor;
+            if (ini.size() == 0){
+                vfim = valor;
+            }else {
+                vfim = valor - temp;
+                temp = valor;
+            }
             ini.add(vfim);
             //Joule
           }
@@ -935,7 +967,7 @@ public class PowerTop extends Activity implements Runnable {
           if (condicaoSalvar == true){
           //if(ini.size() == (tempoTotal/ observacao_escolhida)) {
               //int tam = ini.size();
-              Toast.makeText(getContext(), "Salvando valores...", Toast.LENGTH_SHORT).show();
+              //Toast.makeText(getContext(), "Salvando valores...", Toast.LENGTH_SHORT).show();
               for (int i = 0; i < ini.size(); i++) {
                   somaConsumoTotal += ini.get(i);
               }
@@ -947,7 +979,7 @@ public class PowerTop extends Activity implements Runnable {
               } else
                   SomaAplicativo02.add(somaConsumoTotal);
 
-              Toast.makeText(getContext(), "Feito!", Toast.LENGTH_SHORT).show();
+              //Toast.makeText(getContext(), "Feito!", Toast.LENGTH_SHORT).show();
               ini.clear();
           }
 

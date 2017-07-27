@@ -146,9 +146,12 @@ public class TesteT extends Activity {
             mediaAplicativo01 = getMediaAritmetica(somaAPP01, somaAPP01.size());
             mediaAplicativo02 = getMediaAritmetica(somaAPP02, somaAPP02.size());
 
+
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+
 
         //edt_APP01.setText(stb1.toString());
 
@@ -178,7 +181,7 @@ public class TesteT extends Activity {
                 it.putExtra("mediaAPP02", mediaAplicativo02);
                 it.putExtra("somasAPP01", somaAPP01);
                 it.putExtra("somasAPP02", somaAPP02);
-
+                it.putExtra("NOMES_APPS", nomes_APPS);
                 startActivity(it);
 
             }
@@ -198,8 +201,8 @@ public class TesteT extends Activity {
 
         TTest testT = new TTest();
 
-        //boolean resutadoTesteT = testT.homoscedasticTTest(vetorSomasAPP01, vetorSomasAPP02, 0.05);
-
+        boolean resutadoTesteT = testT.homoscedasticTTest(vetorSomasAPP01, vetorSomasAPP02, 0.05);
+        boolean testeT = testT.homoscedasticTTest(vetorSomasAPP01, vetorSomasAPP02, 0.05);
 
 
         mediaAPP01.setText(Double.toString(mediaAplicativo01));
@@ -211,7 +214,7 @@ public class TesteT extends Activity {
         desvioPadraoAPP01.setText(Double.toString(desvioPadrao01));
         desvioPadraoAPP02.setText(Double.toString(desvioPadrao02));
 
-        //resultado_TesteT.setText(Boolean.toString(resutadoTesteT));
+        resultado_TesteT.setText(Boolean.toString(testeT));
 
 
 
