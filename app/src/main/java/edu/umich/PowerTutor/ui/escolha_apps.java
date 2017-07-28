@@ -39,12 +39,12 @@ public class escolha_apps extends Activity{
 
     int MENU1 = 0, MENU2 = 1, MENU3 = 2;
 
-    public static final CharSequence[] TEMPOS = { "Testes","1 MINUTO", "2 MINUTOS", "3 MINUTOS", "5 MINUTOS", "8 MINUTOS", "15 MINUTOS"};
+    public static final CharSequence[] TEMPOS = { "Testes","30 segundos", "1 MINUTO", "2 MINUTOS", "3 MINUTOS", "5 MINUTOS", "8 MINUTOS", "15 MINUTOS"};
 
     public static final CharSequence[] INTERVALOS = {"Testes", "1", "3", "5", "7", "8", "10", "15", "30", "40", "50", "60"};
 
 
-    int tempo_valores[] = {10000, 60000, 120000, 180000, 300000, 480000, 900000};
+    int tempo_valores[] = {10000, 30000, 60000, 120000, 180000, 300000, 480000, 900000};
     int obsevacoes_valores[] = {2, 1, 3, 5, 7, 8, 10, 15, 30, 40, 50, 60};
 
     int tempo_escolhido;
@@ -93,6 +93,7 @@ public class escolha_apps extends Activity{
             String nome = ap.packageName;
             try {
                 ApplicationInfo app = getPackageManager().getApplicationInfo(nome, 0);
+
                 CharSequence nome1 = getPackageManager().getApplicationLabel(app);
                 opcoes.add((String) nome1);
                 salvaPacotes.add(nome);
@@ -183,7 +184,7 @@ public class escolha_apps extends Activity{
 
     public boolean onCreateOptionsMenu(Menu menu) {
         menu.add(0, MENU1, 0, "Definir Execução");
-        menu.add(0, MENU2, 0, "Preferências Adicionais");
+        //menu.add(0, MENU2, 0, "Preferências Adicionais");
         return super.onCreateOptionsMenu(menu);
     }
 

@@ -4,26 +4,26 @@
     api-level="23"
     density="xhdpi"
     format="7"
-    timestamp="77726602365134" >
+    timestamp="11728434253341" >
 
     <task
         name="javac"
-        duration="4664" />
+        duration="1570" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="4240" />
+        duration="97" />
     <task
         name="verifier"
-        duration="2721" />
+        duration="6" />
 
     <artifact
         location="D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\build\outputs\apk\app-debug.apk"
         type="MAIN" />
 
-    <build timestamp="77726602365134" >
+    <build timestamp="11728434253341" >
         <artifact
             location="D:\Arquivos_Programacao\NUPASD\testes2\PowerTutor-master1\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />

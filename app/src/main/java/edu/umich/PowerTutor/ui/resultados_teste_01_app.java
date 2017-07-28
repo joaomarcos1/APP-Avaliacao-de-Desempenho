@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
@@ -146,9 +147,10 @@ public class resultados_teste_01_app extends Activity {
             @Override
             public void onClick(View view) {
                 finish();
+                Intent it = new Intent(resultados_teste_01_app.this, UMLogger.class);
+                startActivity(it);
             }
         });
-
 
         double SomasAplicativo01 = 0;
         for (int i = 0; i < somaAPP01.size(); i++) {

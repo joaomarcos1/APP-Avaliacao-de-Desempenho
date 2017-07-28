@@ -230,10 +230,6 @@ public class graficos_resultados extends Activity {
 
 
 
-
-
-
-
 /*
 
     public void enviarDados(View view){

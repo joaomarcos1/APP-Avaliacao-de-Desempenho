@@ -71,7 +71,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="#656565">
+        android:background="#c0c0c0">
 
 
         <LinearLayout
@@ -87,7 +87,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_marginTop="20dp"
-            android:background="#808080" />
+            android:background="#f3f3f3" />
 
     <com.github.mikephil.charting.charts.BarChart
         android:id="@+id/chart2"
@@ -97,7 +97,7 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/chart"
         android:layout_marginTop="20dp"
-        android:background="#808080" />
+        android:background="#f3f3f3" />
 
         <com.github.mikephil.charting.charts.BarChart
             android:id="@+id/chart3"
@@ -107,7 +107,7 @@
             android:layout_alignParentLeft="true"
             android:layout_below="@+id/chart"
             android:layout_marginTop="20dp"
-            android:background="#808080" />
+            android:background="#f3f3f3" />
 
         <Button
             android:layout_width="match_parent"

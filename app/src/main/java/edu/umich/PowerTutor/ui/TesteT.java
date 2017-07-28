@@ -163,6 +163,7 @@ public class TesteT extends Activity {
             public void onClick(View view) {
                 finishActivity(1);
                 Intent it = new Intent (TesteT.this, UMLogger.class);
+
                 startActivity(it);
             }
         });
