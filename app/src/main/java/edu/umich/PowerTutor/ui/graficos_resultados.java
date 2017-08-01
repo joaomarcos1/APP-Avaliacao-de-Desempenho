@@ -38,6 +38,14 @@ import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.auth.api.credentials.internal.SaveRequest;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.itextpdf.text.Chunk;
+import com.itextpdf.text.Document;
+import com.itextpdf.text.Image;
+import com.itextpdf.text.Paragraph;
+import com.itextpdf.text.Phrase;
+import com.itextpdf.text.pdf.PdfPCell;
+import com.itextpdf.text.pdf.PdfPTable;
+import com.itextpdf.text.pdf.PdfWriter;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
@@ -49,9 +57,14 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
+import org.w3c.dom.Element;
 
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 
 import edu.umich.PowerTutor.R;
 
@@ -114,6 +127,127 @@ public class graficos_resultados extends Activity {
             @Override
             public void onClick(View view) {
                 Toast.makeText(graficos_resultados.this, "Gerando Relatório Completo!", Toast.LENGTH_SHORT).show();
+
+                Document document = new Document();
+
+
+                try {
+
+                    Toast.makeText(getApplicationContext(), "Pdf OK1!",
+                            Toast.LENGTH_SHORT).show();
+                    PdfWriter.getInstance(document,
+                            new FileOutputStream("/storage/emulated/0/" + System.currentTimeMillis() + ".pdf"));
+                    document.open();
+                    Toast.makeText(getApplicationContext(), "Pdf OK 1.1!",Toast.LENGTH_SHORT).show();
+                    Paragraph paragraph = new Paragraph();
+                    Paragraph paragraph2 = new Paragraph();
+                    Paragraph paragraph3 = new Paragraph();
+                    paragraph.setAlignment(Element.DOCUMENT_POSITION_CONTAINS);
+                    paragraph.add(new Phrase("Relatório"));
+                    document.add(paragraph);
+
+                    Toast.makeText(getApplicationContext(), "Pdf OK2!",
+                            Toast.LENGTH_SHORT).show();
+                    Image image2 = Image.getInstance("/storage/emulated/0/DCIM/"+nomeImagem02+".jpg");
+                    image2.scaleAbsolute(200f, 200f);
+                    document.add(image2);
+
+                    ///storage/emulated/0/
+                    Toast.makeText(getApplicationContext(), "Pdf OK3!",
+                            Toast.LENGTH_SHORT).show();
+
+
+                    /*String imageUrl = "http://jenkov.com/images/" +
+                            "20081123-20081123-3E1W7902-small-portrait.jpg";
+                    Toast.makeText(getApplicationContext(), "Pdf OK3!",
+                            Toast.LENGTH_SHORT).show();
+
+                    com.itextpdf.text.Image image22 = com.itextpdf.text.Image.getInstance(new URL(imageUrl));
+                    document.add(image22);*/
+
+
+
+                    document.add(new Chunk("Este Relatório apresenta os dados da avaliação do Aplicativo " +
+                            "e apresenta algumas informações estatíticas sobre o mesmo."));
+
+                    //pega hora
+
+                    SimpleDateFormat dateFormat_hora = new SimpleDateFormat("HH:mm:ss");
+
+                    Date data = new Date();
+
+                    Calendar cal = Calendar.getInstance();
+                    cal.setTime(data);
+                    Date data_atual = cal.getTime();
+
+
+
+
+
+
+                    String media1 =  Double.toString(mediaAPP01);;
+                    String variancia1 = Double.toString(varianciaAPP01);
+                    String desvioP1 = Double.toString(desvioPadraoAPP01);
+                    paragraph2.add(new Phrase("Tabela APP1"));
+                    document.add(paragraph2);
+                    Image image1 = Image.getInstance("/storage/emulated/0/DCIM/"+nomeImagem01+".jpg");
+                    image1.scaleAbsolute(200f, 200f);
+                    document.add(image1);
+
+                    PdfPTable table1 = new PdfPTable(2); // 2 columns.
+
+
+                    PdfPCell cell1 = new PdfPCell(new Paragraph("Media"));
+                    PdfPCell cell2 = new PdfPCell(new Paragraph(media1));
+                    PdfPCell cell3 = new PdfPCell(new Paragraph("Variancia"));
+                    PdfPCell cell4 = new PdfPCell(new Paragraph(variancia1));
+                    PdfPCell cell5 = new PdfPCell(new Paragraph("Desvio Padrao"));
+                    PdfPCell cell6 = new PdfPCell(new Paragraph(desvioP1));
+
+
+                    table1.addCell(cell1);
+                    table1.addCell(cell2);
+                    table1.addCell(cell3);
+                    table1.addCell(cell4);
+                    table1.addCell(cell5);
+                    table1.addCell(cell6);
+
+                    document.add(table1);
+
+                    String media2 =  Double.toString(mediaAPP02);;
+                    String variancia2 = Double.toString(varianciaAPP02);
+                    String desvioP2 = Double.toString(desvioPadraoAPP02);
+                    paragraph3.add(new Phrase("Tabela APP2"));
+                    document.add(paragraph3);
+
+                    Image image3 = Image.getInstance("/storage/emulated/0/DCIM/"+nomeImagem03+".jpg");
+                    image3.scaleAbsolute(200f, 200f);
+                    document.add(image3);
+
+                    PdfPTable table2 = new PdfPTable(2); // 2 columns.
+
+
+                    PdfPCell cell7 = new PdfPCell(new Paragraph("Media"));
+                    PdfPCell cell8 = new PdfPCell(new Paragraph(media2));
+                    PdfPCell cell9 = new PdfPCell(new Paragraph("Variancia"));
+                    PdfPCell cell10 = new PdfPCell(new Paragraph(variancia2));
+                    PdfPCell cell11 = new PdfPCell(new Paragraph("Desvio Padrao"));
+                    PdfPCell cell12 = new PdfPCell(new Paragraph(desvioP2));
+
+
+                    table2.addCell(cell7);
+                    table2.addCell(cell8);
+                    table2.addCell(cell9);
+                    table2.addCell(cell10);
+                    table2.addCell(cell11);
+                    table2.addCell(cell12);
+
+                    document.add(table2);
+
+                    document.close();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
         });
 
@@ -227,6 +361,10 @@ public class graficos_resultados extends Activity {
         barChar2.invalidate();
 
     }
+
+
+
+
 
 
 

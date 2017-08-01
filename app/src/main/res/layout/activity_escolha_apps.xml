@@ -24,6 +24,7 @@
         android:layout_height="wrap_content"
         android:text="@string/voltar_tela_log_aps"
         android:id="@+id/btn_voltar_logs_apps"
+        android:background="@drawable/button_blue"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_toLeftOf="@+id/chk_SalvarDadosEmLOG_TelaSelecaoDeAPPS" />
@@ -31,6 +32,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/button_blue"
         android:layout_above="@+id/btn_voltar_logs_apps"
         android:layout_alignParentLeft="true"
         android:text="@string/confirmar_escolha_apps"

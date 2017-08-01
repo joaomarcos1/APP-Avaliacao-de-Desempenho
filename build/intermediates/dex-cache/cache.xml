@@ -1,3 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
 
+    <item
+        jar="D:\Arquivos_Programacao\NUPASD\AppCompare-master\app\libs\mpandroidchartlibrary-2-2-4.jar"
+        jumboMode="true"
+        revision="25.0.0"
+        sha1="e5455fb794bfcbeb75da252dffd907794614f7fd">
+        <dex dex="D:\Arquivos_Programacao\NUPASD\AppCompare-master\app\build\intermediates\transforms\dex\debug\folders\1000\2\mpandroidchartlibrary-2-2-4_96c68a98602fc297eb8029f29e8536d0da62dabb\classes.dex" />
+    </item>
+    <item
+        jar="D:\Arquivos_Programacao\NUPASD\AppCompare-master\app\libs\apache-mime4j-0.6.jar"
+        jumboMode="true"
+        revision="25.0.0"
+        sha1="945007627e8d12275d755081a9e609c018e1210d">
+        <dex dex="D:\Arquivos_Programacao\NUPASD\AppCompare-master\app\build\intermediates\transforms\dex\debug\folders\1000\2\apache-mime4j-0.6_4cb14d588ff353cd2301cd7c3c1df3d52ecc6ab9\classes.dex" />
+    </item>
+    <item
+        jar="D:\Arquivos_Programacao\NUPASD\AppCompare-master\app\libs\httpmime-4.1.1.jar"
+        jumboMode="true"
+        revision="25.0.0"
+        sha1="d34b163e52a9727101aced60775d51c5085390a1">
+        <dex dex="D:\Arquivos_Programacao\NUPASD\AppCompare-master\app\build\intermediates\transforms\dex\debug\folders\1000\2\httpmime-4.1.1_ebf90a80d0e61ec2160dc72dcfbaeef51ee6d595\classes.dex" />
+    </item>
+    <item
+        jar="D:\Arquivos_Programacao\NUPASD\AppCompare-master\app\libs\commons-math3-3.6.1.jar"
+        jumboMode="true"
+        revision="25.0.0"
+        sha1="e4ba98f1d4b3c80ec46392f25e094a6a2e58fcbf">
+        <dex dex="D:\Arquivos_Programacao\NUPASD\AppCompare-master\app\build\intermediates\transforms\dex\debug\folders\1000\2\commons-math3-3.6.1_a18b2bbbb3159ce8f4c2f92e04a98ddb93a5e445\classes.dex" />
+    </item>
+    <item
+        jar="C:\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.0\support-annotations-22.2.0.jar"
+        jumboMode="true"
+        revision="25.0.0"
+        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
+        <dex dex="D:\Arquivos_Programacao\NUPASD\AppCompare-master\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-22.2.0_70ba567356d3f4e70248bb87208265e9c5e15549\classes.dex" />
+    </item>
+    <item
+        jar="D:\Arquivos_Programacao\NUPASD\AppCompare-master\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="25.0.0"
+        sha1="cea6a13add03621ffd7fb7c80b336b3a2e30bd9c">
+        <dex dex="D:\Arquivos_Programacao\NUPASD\AppCompare-master\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_1b0f02c4424a9f762f7f19526d352f5ec562a0de\classes.dex" />
+    </item>
+    <item
+        jar="D:\Arquivos_Programacao\NUPASD\AppCompare-master\app\libs\achartengine-1.0.0.jar"
+        jumboMode="true"
+        revision="25.0.0"
+        sha1="b2bb0af9f390c0edd4d7d95f613f38da3abe0144">
+        <dex dex="D:\Arquivos_Programacao\NUPASD\AppCompare-master\app\build\intermediates\transforms\dex\debug\folders\1000\2\achartengine-1.0.0_98275076b8d1fe7b0c0ad6eb0fa909946b3cb920\classes.dex" />
+    </item>
+    <item
+        jar="D:\Arquivos_Programacao\NUPASD\AppCompare-master\app\libs\itextg-5.5.8.jar"
+        jumboMode="true"
+        revision="25.0.0"
+        sha1="b4776ad88a90a2cf10ca37c454c5520c7d5466f7">
+        <dex dex="D:\Arquivos_Programacao\NUPASD\AppCompare-master\app\build\intermediates\transforms\dex\debug\folders\1000\2\itextg-5.5.8_c6772ebfdf6f8f504d7208407e0ec0f2a55e064b\classes.dex" />
+    </item>
+    <item
+        jar="D:\Arquivos_Programacao\NUPASD\AppCompare-master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.1.0\jars\classes.jar"
+        jumboMode="true"
+        revision="25.0.0"
+        sha1="d0dda274b703dd9c5bb056867649d22b4171ae7d">
+        <dex dex="D:\Arquivos_Programacao\NUPASD\AppCompare-master\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-basement-8.1.0_07c741f61130a51f71e7e26fad8004db749f1c7e\classes.dex" />
+    </item>
+    <item
+        jar="D:\Arquivos_Programacao\NUPASD\AppCompare-master\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="25.0.0"
+        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
+        <dex dex="D:\Arquivos_Programacao\NUPASD\AppCompare-master\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-22.2.0_d1174f2f113adfea51257ee2e4d991be9614e683\classes.dex" />
+    </item>
+    <item
+        jar="D:\Arquivos_Programacao\NUPASD\AppCompare-master\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        revision="25.0.0"
+        sha1="b4ed45831116566805945d73ee2daa152524b18e">
+        <dex dex="D:\Arquivos_Programacao\NUPASD\AppCompare-master\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_db8cdfdd50320dbbe7c9361813f229b40a35a2ad\classes.dex" />
+    </item>
+    <item
+        jar="D:\Arquivos_Programacao\NUPASD\AppCompare-master\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\libs\internal_impl-22.2.0.jar"
+        jumboMode="true"
+        revision="25.0.0"
+        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
+        <dex dex="D:\Arquivos_Programacao\NUPASD\AppCompare-master\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-22.2.0_390b775f247219ffd9f0605924dc8cd609084eab\classes.dex" />
+    </item>
+    <item
+        jar="D:\Arquivos_Programacao\NUPASD\AppCompare-master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.1.0\jars\classes.jar"
+        jumboMode="true"
+        revision="25.0.0"
+        sha1="4477ea44f5ec5ad064022a22691732d7638ff197">
+        <dex dex="D:\Arquivos_Programacao\NUPASD\AppCompare-master\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-appindexing-8.1.0_016f7a33f609637b25ed1f82abd02fbd37e95774\classes.dex" />
+    </item>
+
+</items>

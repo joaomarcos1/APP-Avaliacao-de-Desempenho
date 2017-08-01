@@ -71,7 +71,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="#c0c0c0">
+        android:background="#656565">
 
 
         <LinearLayout
@@ -87,7 +87,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_marginTop="20dp"
-            android:background="#f3f3f3" />
+            android:background="#808080" />
 
     <com.github.mikephil.charting.charts.BarChart
         android:id="@+id/chart2"
@@ -97,7 +97,7 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/chart"
         android:layout_marginTop="20dp"
-        android:background="#f3f3f3" />
+        android:background="#808080" />
 
         <com.github.mikephil.charting.charts.BarChart
             android:id="@+id/chart3"
@@ -107,12 +107,13 @@
             android:layout_alignParentLeft="true"
             android:layout_below="@+id/chart"
             android:layout_marginTop="20dp"
-            android:background="#f3f3f3" />
+            android:background="#808080" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Salvar Gráficos"
+            android:background="@drawable/button_blue"
             android:id="@+id/btn_Salvar_Graficos_TesteT"
             android:layout_marginTop="20dp" />
 
@@ -120,9 +121,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Salvar Relatório"
+            android:background="@drawable/button_blue"
             android:id="@+id/btn_Salvar_Relatorios__TesteT" />
 
         <Button
+            android:background="@drawable/button_blue"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Voltar"

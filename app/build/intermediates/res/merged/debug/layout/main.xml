@@ -4,51 +4,66 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background = "@drawable/background"
-  >
-
-
-
-    <LinearLayout
-      android:orientation="vertical"
-      android:layout_width="0px"
-      android:layout_height="fill_parent"
-      android:layout_weight="3"
 
     >
 
+
+    <LinearLayout
+        android:layout_width="0px"
+        android:layout_height="fill_parent"
+        android:layout_weight="3"
+        android:orientation="vertical"
+
+        android:weightSum="1">
+
         <TextView
-            android:textSize="25pt"
-            android:layout_width="159dp"
-            android:layout_height="119dp"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Nome APP"
             android:id="@+id/textView4"
-            android:layout_gravity="center_horizontal" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="App Compare"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#000000"
+            android:textSize="20pt"
 
-        <Button android:id="@+id/servicestartbutton"
-          android:layout_width="225dp"
-          android:layout_height="58dp"
-          android:layout_marginTop="120dp"
-          android:textSize="10pt"
-          android:layout_gravity="center"
-          android:text="Iniciar Serviço"
-          />
-      <Button android:id="@+id/appviewerbutton"
-          android:text="Teste de Aplicativos"
-          android:layout_width="225dp"
-          android:layout_height="58dp"
-          android:textSize="8pt"
-          android:layout_gravity="center_horizontal" />
+            android:typeface="normal" />
 
-      <Button android:id="@+id/sysviewerbutton"
-          android:text="Informações do Sistema"
-          android:layout_width="225dp"
-          android:layout_height="65dp"
-          android:textSize="8pt"
-          android:layout_gravity="center_horizontal" />
+        <Button
+            android:id="@+id/servicestartbutton"
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/button_blue"
+            android:drawableRight="@drawable/iconbutplay"
+            android:text="Iniciar Serviço"
+            android:textSize="10pt"
+            android:typeface="normal" />
+
+        <Button
+            android:id="@+id/appviewerbutton"
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/button_blue"
+            android:drawableRight="@drawable/iconbut"
+            android:text="Realizar Teste"
+            android:textSize="10pt"
+            android:typeface="normal" />
+
+        <Button
+            android:id="@+id/sysviewerbutton"
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/button_blue"
+            android:drawableRight="@drawable/iconbutabout"
+            android:text="Informações do Sistema"
+            android:textSize="10pt"
+            android:typeface="normal" />
 
 
-  </LinearLayout>
+    </LinearLayout>
 
 </LinearLayout>
 

@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
@@ -147,10 +146,9 @@ public class resultados_teste_01_app extends Activity {
             @Override
             public void onClick(View view) {
                 finish();
-                Intent it = new Intent(resultados_teste_01_app.this, UMLogger.class);
-                startActivity(it);
             }
         });
+
 
         double SomasAplicativo01 = 0;
         for (int i = 0; i < somaAPP01.size(); i++) {
@@ -258,7 +256,7 @@ public class resultados_teste_01_app extends Activity {
                 Toast.makeText(resultados_teste_01_app.this, "Criar Relatório Completo!", Toast.LENGTH_SHORT).show();
 
 
-                Document document = null;
+                Document document = new Document();
 
 
                 try {
@@ -270,6 +268,7 @@ public class resultados_teste_01_app extends Activity {
                     document.open();
 
                     Paragraph paragraph = new Paragraph();
+                    Paragraph paragraph2 = new Paragraph();
                     paragraph.setAlignment(Element.DOCUMENT_POSITION_CONTAINS);
                     paragraph.add(new Phrase("Relatório"));
                     document.add(paragraph);
@@ -306,24 +305,36 @@ public class resultados_teste_01_app extends Activity {
                     cal.setTime(data);
                     Date data_atual = cal.getTime();
 
+
+
+
+
                     String hora_atual = dateFormat_hora.format(data_atual);
+                    String media =  Double.toString(mediaAplicativo01);;
+                    String variancia = Double.toString(variancia01);
+                    String desvioP = Double.toString(desvioPadrao01);
+                    paragraph2.add(new Phrase("Tabela "+nome_APP));
+                    document.add(paragraph2);
+
+                    PdfPTable table1 = new PdfPTable(2); // 2 columns.
 
 
-                    PdfPTable table = new PdfPTable(3); // 3 columns.
+                    PdfPCell cell1 = new PdfPCell(new Paragraph("Media"));
+                    PdfPCell cell2 = new PdfPCell(new Paragraph(media));
+                    PdfPCell cell3 = new PdfPCell(new Paragraph("Variancia"));
+                    PdfPCell cell4 = new PdfPCell(new Paragraph(variancia));
+                    PdfPCell cell5 = new PdfPCell(new Paragraph("Desvio Padrao"));
+                    PdfPCell cell6 = new PdfPCell(new Paragraph(desvioP));
 
-                    PdfPCell cell1 = new PdfPCell(new Paragraph("Cell 1"));
-                    PdfPCell cell2 = new PdfPCell(new Paragraph("Cell 2"));
-                    PdfPCell cell3 = new PdfPCell(new Paragraph("Cell 3"));
-                    PdfPCell cell4 = new PdfPCell(new Paragraph(hora_atual));
-                    table.addCell(new Paragraph("Text Mode"));
-                    table.addCell(new Paragraph("Text Mode"));
 
-                    table.addCell(cell1);
-                    table.addCell(cell2);
-                    table.addCell(cell3);
-                    table.addCell(cell4);
+                    table1.addCell(cell1);
+                    table1.addCell(cell2);
+                    table1.addCell(cell3);
+                    table1.addCell(cell4);
+                    table1.addCell(cell5);
+                    table1.addCell(cell6);
 
-                    document.add(table);
+                    document.add(table1);
 
                     document.close();
                 } catch (Exception e) {

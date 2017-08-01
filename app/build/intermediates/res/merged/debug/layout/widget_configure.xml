@@ -17,6 +17,7 @@
       android:layout_weight="0.85">
     <Button android:id="@+id/save_button"
         android:text="Save"
+        android:background="@drawable/button_blue"
         android:layout_width="fill_parent" 
         android:layout_height="fill_parent"
         android:layout_weight="1"
@@ -24,6 +25,7 @@
       />
     <Button android:id="@+id/cancel_button"
         android:text="Cancel"
+        android:background="@drawable/button_blue"
         android:layout_width="fill_parent" 
         android:layout_height="fill_parent"
         android:layout_weight="1"

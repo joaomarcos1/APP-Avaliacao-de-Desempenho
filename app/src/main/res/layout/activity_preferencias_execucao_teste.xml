@@ -23,6 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Voltar"
+        android:background="@drawable/button_blue"
         android:id="@+id/btn_voltar_preferencias_execucao_Teste"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"

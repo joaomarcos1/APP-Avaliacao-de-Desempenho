@@ -7,7 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="#909090"
+    android:background="#606060"
     tools:context="edu.umich.PowerTutor.ui.resultados_teste_01_app">
 
 
@@ -88,18 +88,17 @@
         android:layout_below="@+id/textView13"
         android:layout_alignParentRight="true"
         android:layout_marginTop="20dp"
-        android:layout_above="@+id/btn_voltar_teste_01_app"
-        android:background="#f3f3f3" />
+        android:layout_above="@+id/btn_voltar_teste_01_app" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/button_blue"
         android:text="@string/voltar_tela_teste_01app"
         android:id="@+id/btn_voltar_teste_01_app"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="10dp" />
+        android:layout_alignParentRight="true" />
 <!--
     <Button
         android:layout_width="wrap_content"

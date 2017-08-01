@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "D:\\Arquivos_Programacao\\NUPASD\\testes2\\PowerTutor-master1\\app\\build\\intermediates\\res\\merged\\debug\\values\\values.xml",
+        "outputFile": "D:\\Arquivos_Programacao\\NUPASD\\AppCompare-master\\app\\build\\intermediates\\res\\merged\\debug\\values\\values.xml",
         "map": [
             {
                 "to": {
@@ -12,7 +12,7 @@
                     "endOffset": 315
                 },
                 "from": {
-                    "file": "D:\\Arquivos_Programacao\\NUPASD\\testes2\\PowerTutor-master1\\app\\src\\main\\res\\values\\arrays.xml",
+                    "file": "D:\\Arquivos_Programacao\\NUPASD\\AppCompare-master\\app\\src\\main\\res\\values\\arrays.xml",
                     "position": {
                         "startLine": 22,
                         "startColumn": 2,
@@ -33,7 +33,7 @@
                     "endOffset": 526
                 },
                 "from": {
-                    "file": "D:\\Arquivos_Programacao\\NUPASD\\testes2\\PowerTutor-master1\\app\\src\\main\\res\\values\\arrays.xml",
+                    "file": "D:\\Arquivos_Programacao\\NUPASD\\AppCompare-master\\app\\src\\main\\res\\values\\arrays.xml",
                     "position": {
                         "startLine": 1,
                         "startColumn": 2,
@@ -54,7 +54,7 @@
                     "endOffset": 685
                 },
                 "from": {
-                    "file": "D:\\Arquivos_Programacao\\NUPASD\\testes2\\PowerTutor-master1\\app\\src\\main\\res\\values\\arrays.xml",
+                    "file": "D:\\Arquivos_Programacao\\NUPASD\\AppCompare-master\\app\\src\\main\\res\\values\\arrays.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 2,
@@ -75,7 +75,7 @@
                     "endOffset": 846
                 },
                 "from": {
-                    "file": "D:\\Arquivos_Programacao\\NUPASD\\testes2\\PowerTutor-master1\\app\\src\\main\\res\\values\\arrays.xml",
+                    "file": "D:\\Arquivos_Programacao\\NUPASD\\AppCompare-master\\app\\src\\main\\res\\values\\arrays.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 2,
@@ -95,7 +95,7 @@
                     "endOffset": 907
                 },
                 "from": {
-                    "file": "D:\\Arquivos_Programacao\\NUPASD\\testes2\\PowerTutor-master1\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_colors.xml",
+                    "file": "D:\\Arquivos_Programacao\\NUPASD\\AppCompare-master\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_colors.xml",
                     "position": {
                         "startLine": 12,
                         "startColumn": 4,
@@ -114,7 +114,7 @@
                     "endOffset": 990
                 },
                 "from": {
-                    "file": "D:\\Arquivos_Programacao\\NUPASD\\testes2\\PowerTutor-master1\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_colors.xml",
+                    "file": "D:\\Arquivos_Programacao\\NUPASD\\AppCompare-master\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_colors.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -133,7 +133,7 @@
                     "endOffset": 1063
                 },
                 "from": {
-                    "file": "D:\\Arquivos_Programacao\\NUPASD\\testes2\\PowerTutor-master1\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_colors.xml",
+                    "file": "D:\\Arquivos_Programacao\\NUPASD\\AppCompare-master\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_colors.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -152,7 +152,7 @@
                     "endOffset": 1146
                 },
                 "from": {
-                    "file": "D:\\Arquivos_Programacao\\NUPASD\\testes2\\PowerTutor-master1\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_colors.xml",
+                    "file": "D:\\Arquivos_Programacao\\NUPASD\\AppCompare-master\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_colors.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -171,7 +171,7 @@
                     "endOffset": 1229
                 },
                 "from": {
-                    "file": "D:\\Arquivos_Programacao\\NUPASD\\testes2\\PowerTutor-master1\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_colors.xml",
+                    "file": "D:\\Arquivos_Programacao\\NUPASD\\AppCompare-master\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_colors.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -190,7 +190,7 @@
                     "endOffset": 1302
                 },
                 "from": {
-                    "file": "D:\\Arquivos_Programacao\\NUPASD\\testes2\\PowerTutor-master1\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_colors.xml",
+                    "file": "D:\\Arquivos_Programacao\\NUPASD\\AppCompare-master\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_colors.xml",
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
@@ -209,7 +209,7 @@
                     "endOffset": 1375
                 },
                 "from": {
-                    "file": "D:\\Arquivos_Programacao\\NUPASD\\testes2\\PowerTutor-master1\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_colors.xml",
+                    "file": "D:\\Arquivos_Programacao\\NUPASD\\AppCompare-master\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_colors.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -228,7 +228,7 @@
                     "endOffset": 1449
                 },
                 "from": {
-                    "file": "D:\\Arquivos_Programacao\\NUPASD\\testes2\\PowerTutor-master1\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_colors.xml",
+                    "file": "D:\\Arquivos_Programacao\\NUPASD\\AppCompare-master\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_colors.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
@@ -247,7 +247,7 @@
                     "endOffset": 1522
                 },
                 "from": {
-                    "file": "D:\\Arquivos_Programacao\\NUPASD\\testes2\\PowerTutor-master1\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_colors.xml",
+                    "file": "D:\\Arquivos_Programacao\\NUPASD\\AppCompare-master\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_colors.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
@@ -266,7 +266,7 @@
                     "endOffset": 1606
                 },
                 "from": {
-                    "file": "D:\\Arquivos_Programacao\\NUPASD\\testes2\\PowerTutor-master1\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_colors.xml",
+                    "file": "D:\\Arquivos_Programacao\\NUPASD\\AppCompare-master\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_colors.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -285,13 +285,13 @@
                     "endOffset": 2238
                 },
                 "from": {
-                    "file": "D:\\Arquivos_Programacao\\NUPASD\\testes2\\PowerTutor-master1\\app\\src\\main\\res\\values\\dimens.xml",
+                    "file": "D:\\Arquivos_Programacao\\NUPASD\\AppCompare-master\\app\\src\\main\\res\\values\\dimens.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
-                        "startOffset": 90,
+                        "startOffset": 88,
                         "endColumn": 57,
-                        "endOffset": 143
+                        "endOffset": 141
                     }
                 }
             },
@@ -304,13 +304,13 @@
                     "endOffset": 2294
                 },
                 "from": {
-                    "file": "D:\\Arquivos_Programacao\\NUPASD\\testes2\\PowerTutor-master1\\app\\src\\main\\res\\values\\dimens.xml",
+                    "file": "D:\\Arquivos_Programacao\\NUPASD\\AppCompare-master\\app\\src\\main\\res\\values\\dimens.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
-                        "startOffset": 149,
+                        "startOffset": 146,
                         "endColumn": 55,
-                        "endOffset": 200
+                        "endOffset": 197
                     }
                 }
             },
@@ -323,7 +323,7 @@
                     "endOffset": 2361
                 },
                 "from": {
-                    "file": "D:\\Arquivos_Programacao\\NUPASD\\testes2\\PowerTutor-master1\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\version.xml",
+                    "file": "D:\\Arquivos_Programacao\\NUPASD\\AppCompare-master\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\version.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -342,7 +342,7 @@
                     "endOffset": 2461
                 },
                 "from": {
-                    "file": "D:\\Arquivos_Programacao\\NUPASD\\testes2\\PowerTutor-master1\\app\\src\\main\\res\\values\\strings.xml",
+                    "file": "D:\\Arquivos_Programacao\\NUPASD\\AppCompare-master\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 91,
                         "startColumn": 4,
@@ -361,7 +361,7 @@
                     "endOffset": 2509
                 },
                 "from": {
-                    "file": "D:\\Arquivos_Programacao\\NUPASD\\testes2\\PowerTutor-master1\\app\\src\\main\\res\\values\\strings.xml",
+                    "file": "D:\\Arquivos_Programacao\\NUPASD\\AppCompare-master\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -380,7 +380,7 @@
                     "endOffset": 2601
                 },
                 "from": {
-                    "file": "D:\\Arquivos_Programacao\\NUPASD\\testes2\\PowerTutor-master1\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\auth_strings.xml",
+                    "file": "D:\\Arquivos_Programacao\\NUPASD\\AppCompare-master\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\auth_strings.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -399,7 +399,7 @@
                     "endOffset": 2689
                 },
                 "from": {
-                    "file": "D:\\Arquivos_Programacao\\NUPASD\\testes2\\PowerTutor-master1\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\auth_strings.xml",
+                    "file": "D:\\Arquivos_Programacao\\NUPASD\\AppCompare-master\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\auth_strings.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -418,7 +418,7 @@
                     "endOffset": 2846
                 },
                 "from": {
-                    "file": "D:\\Arquivos_Programacao\\NUPASD\\testes2\\PowerTutor-master1\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
+                    "file": "D:\\Arquivos_Programacao\\NUPASD\\AppCompare-master\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
@@ -437,7 +437,7 @@
                     "endOffset": 2991
                 },
                 "from": {
-                    "file": "D:\\Arquivos_Programacao\\NUPASD\\testes2\\PowerTutor-master1\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
+                    "file": "D:\\Arquivos_Programacao\\NUPASD\\AppCompare-master\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
                     "position": {
                         "startLine": 60,
                         "startColumn": 4,
@@ -456,7 +456,7 @@
                     "endOffset": 3100
                 },
                 "from": {
-                    "file": "D:\\Arquivos_Programacao\\NUPASD\\testes2\\PowerTutor-master1\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
+                    "file": "D:\\Arquivos_Programacao\\NUPASD\\AppCompare-master\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
                     "position": {
                         "startLine": 52,
                         "startColumn": 4,
@@ -475,7 +475,7 @@
                     "endOffset": 3332
                 },
                 "from": {
-                    "file": "D:\\Arquivos_Programacao\\NUPASD\\testes2\\PowerTutor-master1\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
+                    "file": "D:\\Arquivos_Programacao\\NUPASD\\AppCompare-master\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
                     "position": {
                         "startLine": 99,
                         "startColumn": 4,
@@ -494,7 +494,7 @@
                     "endOffset": 3458
                 },
                 "from": {
-                    "file": "D:\\Arquivos_Programacao\\NUPASD\\testes2\\PowerTutor-master1\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
+                    "file": "D:\\Arquivos_Programacao\\NUPASD\\AppCompare-master\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
                     "position": {
                         "startLine": 44,
                         "startColumn": 4,
@@ -513,7 +513,7 @@
                     "endOffset": 3639
                 },
                 "from": {
-                    "file": "D:\\Arquivos_Programacao\\NUPASD\\testes2\\PowerTutor-master1\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
+                    "file": "D:\\Arquivos_Programacao\\NUPASD\\AppCompare-master\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
                     "position": {
                         "startLine": 39,
                         "startColumn": 4,
@@ -532,7 +532,7 @@
                     "endOffset": 3764
                 },
                 "from": {
-                    "file": "D:\\Arquivos_Programacao\\NUPASD\\testes2\\PowerTutor-master1\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
+                    "file": "D:\\Arquivos_Programacao\\NUPASD\\AppCompare-master\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
                     "position": {
                         "startLine": 35,
                         "startColumn": 4,
@@ -551,7 +551,7 @@
                     "endOffset": 3903
                 },
                 "from": {
-                    "file": "D:\\Arquivos_Programacao\\NUPASD\\testes2\\PowerTutor-master1\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
+                    "file": "D:\\Arquivos_Programacao\\NUPASD\\AppCompare-master\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
                     "position": {
                         "startLine": 16,
                         "startColumn": 4,
@@ -570,7 +570,7 @@
                     "endOffset": 4027
                 },
                 "from": {
-                    "file": "D:\\Arquivos_Programacao\\NUPASD\\testes2\\PowerTutor-master1\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
+                    "file": "D:\\Arquivos_Programacao\\NUPASD\\AppCompare-master\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
                     "position": {
                         "startLine": 31,
                         "startColumn": 4,
@@ -589,7 +589,7 @@
                     "endOffset": 4240
                 },
                 "from": {
-                    "file": "D:\\Arquivos_Programacao\\NUPASD\\testes2\\PowerTutor-master1\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
+                    "file": "D:\\Arquivos_Programacao\\NUPASD\\AppCompare-master\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
                     "position": {
                         "startLine": 24,
                         "startColumn": 4,
@@ -608,7 +608,7 @@
                     "endOffset": 4455
                 },
                 "from": {
-                    "file": "D:\\Arquivos_Programacao\\NUPASD\\testes2\\PowerTutor-master1\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
+                    "file": "D:\\Arquivos_Programacao\\NUPASD\\AppCompare-master\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
                     "position": {
                         "startLine": 28,
                         "startColumn": 4,
@@ -627,7 +627,7 @@
                     "endOffset": 4578
                 },
                 "from": {
-                    "file": "D:\\Arquivos_Programacao\\NUPASD\\testes2\\PowerTutor-master1\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
+                    "file": "D:\\Arquivos_Programacao\\NUPASD\\AppCompare-master\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
                     "position": {
                         "startLine": 20,
                         "startColumn": 4,
@@ -646,7 +646,7 @@
                     "endOffset": 4743
                 },
                 "from": {
-                    "file": "D:\\Arquivos_Programacao\\NUPASD\\testes2\\PowerTutor-master1\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
+                    "file": "D:\\Arquivos_Programacao\\NUPASD\\AppCompare-master\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
                     "position": {
                         "startLine": 80,
                         "startColumn": 4,
@@ -665,7 +665,7 @@
                     "endOffset": 4837
                 },
                 "from": {
-                    "file": "D:\\Arquivos_Programacao\\NUPASD\\testes2\\PowerTutor-master1\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
+                    "file": "D:\\Arquivos_Programacao\\NUPASD\\AppCompare-master\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
                     "position": {
                         "startLine": 77,
                         "startColumn": 4,
@@ -684,7 +684,7 @@
                     "endOffset": 4974
                 },
                 "from": {
-                    "file": "D:\\Arquivos_Programacao\\NUPASD\\testes2\\PowerTutor-master1\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
+                    "file": "D:\\Arquivos_Programacao\\NUPASD\\AppCompare-master\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
                     "position": {
                         "startLine": 13,
                         "startColumn": 4,
@@ -703,7 +703,7 @@
                     "endOffset": 5115
                 },
                 "from": {
-                    "file": "D:\\Arquivos_Programacao\\NUPASD\\testes2\\PowerTutor-master1\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
+                    "file": "D:\\Arquivos_Programacao\\NUPASD\\AppCompare-master\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
                     "position": {
                         "startLine": 74,
                         "startColumn": 4,
@@ -722,7 +722,7 @@
                     "endOffset": 5205
                 },
                 "from": {
-                    "file": "D:\\Arquivos_Programacao\\NUPASD\\testes2\\PowerTutor-master1\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
+                    "file": "D:\\Arquivos_Programacao\\NUPASD\\AppCompare-master\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
                     "position": {
                         "startLine": 71,
                         "startColumn": 4,
@@ -741,7 +741,7 @@
                     "endOffset": 5353
                 },
                 "from": {
-                    "file": "D:\\Arquivos_Programacao\\NUPASD\\testes2\\PowerTutor-master1\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
+                    "file": "D:\\Arquivos_Programacao\\NUPASD\\AppCompare-master\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -760,7 +760,7 @@
                     "endOffset": 5456
                 },
                 "from": {
-                    "file": "D:\\Arquivos_Programacao\\NUPASD\\testes2\\PowerTutor-master1\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
+                    "file": "D:\\Arquivos_Programacao\\NUPASD\\AppCompare-master\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -779,7 +779,7 @@
                     "endOffset": 5607
                 },
                 "from": {
-                    "file": "D:\\Arquivos_Programacao\\NUPASD\\testes2\\PowerTutor-master1\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
+                    "file": "D:\\Arquivos_Programacao\\NUPASD\\AppCompare-master\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
                     "position": {
                         "startLine": 105,
                         "startColumn": 4,
@@ -798,7 +798,7 @@
                     "endOffset": 5699
                 },
                 "from": {
-                    "file": "D:\\Arquivos_Programacao\\NUPASD\\testes2\\PowerTutor-master1\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
+                    "file": "D:\\Arquivos_Programacao\\NUPASD\\AppCompare-master\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
                     "position": {
                         "startLine": 102,
                         "startColumn": 4,
@@ -817,7 +817,7 @@
                     "endOffset": 5810
                 },
                 "from": {
-                    "file": "D:\\Arquivos_Programacao\\NUPASD\\testes2\\PowerTutor-master1\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
+                    "file": "D:\\Arquivos_Programacao\\NUPASD\\AppCompare-master\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
                     "position": {
                         "startLine": 84,
                         "startColumn": 4,
@@ -836,7 +836,7 @@
                     "endOffset": 6029
                 },
                 "from": {
-                    "file": "D:\\Arquivos_Programacao\\NUPASD\\testes2\\PowerTutor-master1\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
+                    "file": "D:\\Arquivos_Programacao\\NUPASD\\AppCompare-master\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
                     "position": {
                         "startLine": 90,
                         "startColumn": 4,
@@ -855,7 +855,7 @@
                     "endOffset": 6124
                 },
                 "from": {
-                    "file": "D:\\Arquivos_Programacao\\NUPASD\\testes2\\PowerTutor-master1\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
+                    "file": "D:\\Arquivos_Programacao\\NUPASD\\AppCompare-master\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
                     "position": {
                         "startLine": 87,
                         "startColumn": 4,
@@ -874,7 +874,7 @@
                     "endOffset": 6229
                 },
                 "from": {
-                    "file": "D:\\Arquivos_Programacao\\NUPASD\\testes2\\PowerTutor-master1\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
+                    "file": "D:\\Arquivos_Programacao\\NUPASD\\AppCompare-master\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
                     "position": {
                         "startLine": 93,
                         "startColumn": 4,
@@ -893,7 +893,7 @@
                     "endOffset": 6410
                 },
                 "from": {
-                    "file": "D:\\Arquivos_Programacao\\NUPASD\\testes2\\PowerTutor-master1\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
+                    "file": "D:\\Arquivos_Programacao\\NUPASD\\AppCompare-master\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
                     "position": {
                         "startLine": 56,
                         "startColumn": 4,
@@ -912,7 +912,7 @@
                     "endOffset": 6535
                 },
                 "from": {
-                    "file": "D:\\Arquivos_Programacao\\NUPASD\\testes2\\PowerTutor-master1\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
+                    "file": "D:\\Arquivos_Programacao\\NUPASD\\AppCompare-master\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
                     "position": {
                         "startLine": 48,
                         "startColumn": 4,
@@ -931,7 +931,7 @@
                     "endOffset": 6710
                 },
                 "from": {
-                    "file": "D:\\Arquivos_Programacao\\NUPASD\\testes2\\PowerTutor-master1\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
+                    "file": "D:\\Arquivos_Programacao\\NUPASD\\AppCompare-master\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
                     "position": {
                         "startLine": 68,
                         "startColumn": 4,
@@ -950,7 +950,7 @@
                     "endOffset": 6815
                 },
                 "from": {
-                    "file": "D:\\Arquivos_Programacao\\NUPASD\\testes2\\PowerTutor-master1\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
+                    "file": "D:\\Arquivos_Programacao\\NUPASD\\AppCompare-master\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
                     "position": {
                         "startLine": 64,
                         "startColumn": 4,
@@ -969,7 +969,7 @@
                     "endOffset": 6878
                 },
                 "from": {
-                    "file": "D:\\Arquivos_Programacao\\NUPASD\\testes2\\PowerTutor-master1\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
+                    "file": "D:\\Arquivos_Programacao\\NUPASD\\AppCompare-master\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
                     "position": {
                         "startLine": 96,
                         "startColumn": 4,
@@ -988,7 +988,7 @@
                     "endOffset": 6939
                 },
                 "from": {
-                    "file": "D:\\Arquivos_Programacao\\NUPASD\\testes2\\PowerTutor-master1\\app\\src\\main\\res\\values\\strings.xml",
+                    "file": "D:\\Arquivos_Programacao\\NUPASD\\AppCompare-master\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 90,
                         "startColumn": 4,
@@ -1007,7 +1007,7 @@
                     "endOffset": 7059
                 },
                 "from": {
-                    "file": "D:\\Arquivos_Programacao\\NUPASD\\testes2\\PowerTutor-master1\\app\\src\\main\\res\\values\\strings.xml",
+                    "file": "D:\\Arquivos_Programacao\\NUPASD\\AppCompare-master\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 36,
                         "startColumn": 4,
@@ -1027,7 +1027,7 @@
                     "endOffset": 9314
                 },
                 "from": {
-                    "file": "D:\\Arquivos_Programacao\\NUPASD\\testes2\\PowerTutor-master1\\app\\src\\main\\res\\values\\strings.xml",
+                    "file": "D:\\Arquivos_Programacao\\NUPASD\\AppCompare-master\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 37,
                         "startColumn": 4,
@@ -1047,7 +1047,7 @@
                     "endOffset": 9433
                 },
                 "from": {
-                    "file": "D:\\Arquivos_Programacao\\NUPASD\\testes2\\PowerTutor-master1\\app\\src\\main\\res\\values\\strings.xml",
+                    "file": "D:\\Arquivos_Programacao\\NUPASD\\AppCompare-master\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -1066,7 +1066,7 @@
                     "endOffset": 9540
                 },
                 "from": {
-                    "file": "D:\\Arquivos_Programacao\\NUPASD\\testes2\\PowerTutor-master1\\app\\src\\main\\res\\values\\strings.xml",
+                    "file": "D:\\Arquivos_Programacao\\NUPASD\\AppCompare-master\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -1085,7 +1085,7 @@
                     "endOffset": 9897
                 },
                 "from": {
-                    "file": "D:\\Arquivos_Programacao\\NUPASD\\testes2\\PowerTutor-master1\\app\\src\\main\\res\\values\\strings.xml",
+                    "file": "D:\\Arquivos_Programacao\\NUPASD\\AppCompare-master\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -1104,7 +1104,7 @@
                     "endOffset": 10252
                 },
                 "from": {
-                    "file": "D:\\Arquivos_Programacao\\NUPASD\\testes2\\PowerTutor-master1\\app\\src\\main\\res\\values\\strings.xml",
+                    "file": "D:\\Arquivos_Programacao\\NUPASD\\AppCompare-master\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -1124,7 +1124,7 @@
                     "endOffset": 11586
                 },
                 "from": {
-                    "file": "D:\\Arquivos_Programacao\\NUPASD\\testes2\\PowerTutor-master1\\app\\src\\main\\res\\values\\strings.xml",
+                    "file": "D:\\Arquivos_Programacao\\NUPASD\\AppCompare-master\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
@@ -1144,7 +1144,7 @@
                     "endOffset": 11825
                 },
                 "from": {
-                    "file": "D:\\Arquivos_Programacao\\NUPASD\\testes2\\PowerTutor-master1\\app\\src\\main\\res\\values\\strings.xml",
+                    "file": "D:\\Arquivos_Programacao\\NUPASD\\AppCompare-master\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -1163,7 +1163,7 @@
                     "endOffset": 11900
                 },
                 "from": {
-                    "file": "D:\\Arquivos_Programacao\\NUPASD\\testes2\\PowerTutor-master1\\app\\src\\main\\res\\values\\strings.xml",
+                    "file": "D:\\Arquivos_Programacao\\NUPASD\\AppCompare-master\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 88,
                         "startColumn": 4,
@@ -1182,7 +1182,7 @@
                     "endOffset": 11995
                 },
                 "from": {
-                    "file": "D:\\Arquivos_Programacao\\NUPASD\\testes2\\PowerTutor-master1\\app\\src\\main\\res\\values\\strings.xml",
+                    "file": "D:\\Arquivos_Programacao\\NUPASD\\AppCompare-master\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 89,
                         "startColumn": 4,
@@ -1201,7 +1201,7 @@
                     "endOffset": 12050
                 },
                 "from": {
-                    "file": "D:\\Arquivos_Programacao\\NUPASD\\testes2\\PowerTutor-master1\\app\\src\\main\\res\\values\\strings.xml",
+                    "file": "D:\\Arquivos_Programacao\\NUPASD\\AppCompare-master\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -1220,7 +1220,7 @@
                     "endOffset": 12109
                 },
                 "from": {
-                    "file": "D:\\Arquivos_Programacao\\NUPASD\\testes2\\PowerTutor-master1\\app\\src\\main\\res\\values\\strings.xml",
+                    "file": "D:\\Arquivos_Programacao\\NUPASD\\AppCompare-master\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 92,
                         "startColumn": 4,

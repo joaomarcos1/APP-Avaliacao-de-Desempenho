@@ -121,7 +121,7 @@ public class PowerTop extends Activity implements Runnable {
   int Sequenciaplicativo = 0;
 
   long inicial1 = System.currentTimeMillis();
-  long atual1 = 0, atual2, inicial2, atual0;
+  long atual1, atual2, inicial2, atual0;
   long tempoTotal;
 
   Intent it1, it2;
@@ -140,7 +140,6 @@ public class PowerTop extends Activity implements Runnable {
     int quantidade_apps = 0;
 
 
-    long aux;
 
   @Override
   public void onCreate(Bundle savedInstanceState) {
@@ -199,7 +198,7 @@ public class PowerTop extends Activity implements Runnable {
 
 
 
-   /* tempoTotal = tempo_escolhido;
+    tempoTotal = tempo_escolhido;
     if (quantidade_apps == 01) {
         Toast.makeText(PowerTop.this, "Tempo escolhido (tela PowerTop): " + tempoTotal, Toast.LENGTH_SHORT).show();
         Toast.makeText(PowerTop.this, "Pacote 01: " + pacotes.get(0), Toast.LENGTH_SHORT).show();
@@ -209,7 +208,7 @@ public class PowerTop extends Activity implements Runnable {
         Toast.makeText(PowerTop.this, "Pacote 02: " + pacotes.get(1), Toast.LENGTH_SHORT).show();
     }
 
-*/
+
 
     it =  new Intent(PowerTop.this, TesteT.class);
 
@@ -360,8 +359,6 @@ public class PowerTop extends Activity implements Runnable {
     serviceIntent = new Intent(this, UMLoggerService.class);
     conn = new CounterServiceConnection();
 
-
-      aux = tempo_escolhido/observacao_escolhida;
 
     if(savedInstanceState != null) {
       componentNames = savedInstanceState.getStringArray("componentNames");
@@ -551,7 +548,7 @@ public class PowerTop extends Activity implements Runnable {
 
               //DELAY PARA DAR TEMPO  O APLICATIVO SER ABERTO, ASSIM O TESTE PODERA OCORRER NO SEU TEMPO NORMAL
               if (cont1 < 1) {
-                  Toast.makeText(PowerTop.this, "Iniciando "+itens.get(0), Toast.LENGTH_SHORT).show();
+                  Toast.makeText(PowerTop.this, "Iniciando Aplicativo!", Toast.LENGTH_SHORT).show();
                   startActivity(it1);
                   cont1++;
               }
@@ -564,17 +561,13 @@ public class PowerTop extends Activity implements Runnable {
                   }
 
                   atual1 = System.currentTimeMillis() - inicial1;
-                  //atual1 += 1000
-                  long aux = tempo_escolhido/observacao_escolhida;
-                  //tempoObservacao += 1000;
-                  tempoObservacao += 1000;
-
-                  if (atual1 <= tempo_escolhido) {
+                  tempoObservacao += 900;
+                  if (atual1 < tempo_escolhido) {
                       NotificationManager nm = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
                       Notification n = new Notification(R.drawable.icon, "thread1 -GERAL!- 60 segundos completos", System.currentTimeMillis());
                       PendingIntent pend = PendingIntent.getActivity(this, 0, new Intent(this, UMLogger.class), 0);
                       //n.setLatestEventInfo(this, titulo, mensagem, PendingIntent);
-                      n.setLatestEventInfo(PowerTop.this, "Avaliando "+itens.get(0), "Tempo: " + atual1/1000, pend);
+                      n.setLatestEventInfo(PowerTop.this, "PowerTop - Verificaçao Simples", "Tempo: " + atual1, pend);
 
                       nm.notify(R.drawable.icon, n);
 
@@ -596,13 +589,12 @@ public class PowerTop extends Activity implements Runnable {
                           powerView.init(uidInfos[i], keyId, itens.get(0), 01, false);
                       }
                       sz++;
-                  } else if (atual1 > tempo_escolhido) {
+                  } else if (atual1 >= tempo_escolhido) {
                       cont4 = 0;
                       finishActivity(1);//finalizar o único aplicativo aberto
                       stopService(serviceIntent);//Finalizar a service que faz a verificação de consumo de energi, que está rodando em segundo plano
-                      counterService = null;//Finalizar serviço rodando em segundo plano
-                      handler = null;
-                      Toast.makeText(PowerTop.this, "Teste Finalizado! Exibindo Resultados", Toast.LENGTH_SHORT).show();
+
+                      Toast.makeText(PowerTop.this, "Abrir Tela Aplicativo Unico!", Toast.LENGTH_SHORT).show();
                       /// /startActivity(it);//abrir tela
                       Intent it0 = new Intent(PowerTop.this, resultados_teste_01_app.class);
                       it0.putExtra("APLICATIVO01", SomaAplicativo01);//MANDANDO SOMA DOS CONSUMOS ENERGETICOS CALCULADAS
@@ -616,7 +608,7 @@ public class PowerTop extends Activity implements Runnable {
 
               if (app == 01) {
                   if (cont1 < 1) {
-                      Toast.makeText(PowerTop.this, "Iniciando "+itens.get(0), Toast.LENGTH_SHORT).show();
+                      Toast.makeText(PowerTop.this, "Iniciando Aplicativo 01!", Toast.LENGTH_SHORT).show();
                       startActivity(it1);
                       cont1++;
                   }
@@ -635,7 +627,7 @@ public class PowerTop extends Activity implements Runnable {
                           Notification n = new Notification(R.drawable.icon, "thread1 -GERAL!- 60 segundos completos", System.currentTimeMillis());
                           PendingIntent pend = PendingIntent.getActivity(this, 0, new Intent(this, UMLogger.class), 0);
                           //n.setLatestEventInfo(this, titulo, mensagem, PendingIntent);
-                          n.setLatestEventInfo(PowerTop.this, "Avaliando "+itens.get(0), "Tempo: " + atual1/1000, pend);//Notificação mostrada enquanto estiver avaliando o APP
+                          n.setLatestEventInfo(PowerTop.this, "PowerTop - Condição 01", "1º APP  - Tempo: " + atual1, pend);
 
                           nm.notify(R.drawable.icon, n);
 
@@ -663,7 +655,7 @@ public class PowerTop extends Activity implements Runnable {
                   }
               } else {
                   if (cont2 < 1) {//Abrir o aplicativo antes de pergar o momento inicial
-                      Toast.makeText(PowerTop.this, "Iniciando "+ itens.get(1), Toast.LENGTH_SHORT).show();//Aviso Iniciando Aplicativo 02!
+                      Toast.makeText(PowerTop.this, "Iniciando Aplicativo 02!", Toast.LENGTH_SHORT).show();
                       startActivity(it2);
                       cont2++;
                   }
@@ -684,20 +676,20 @@ public class PowerTop extends Activity implements Runnable {
                       atual2 = System.currentTimeMillis() - inicial2;
                       tempoObservacao += 1000;
 
-                      if (atual2 < (tempo_escolhido + 500)) {
+                      if (atual2 < tempo_escolhido) {
                           //if (atual >= (tempoTotal/2) && (atual <= tempoTotal)){
 
                           NotificationManager nm1 = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
                           Notification n1 = new Notification(R.drawable.icon, "thread1 -GERAL!- 60 segundos completos", System.currentTimeMillis());
                           PendingIntent pend1 = PendingIntent.getActivity(this, 0, new Intent(this, UMLogger.class), 0);
                           //n.setLatestEventInfo(this, titulo, mensagem, PendingIntent);
-                          n1.setLatestEventInfo(PowerTop.this, "Avaliando "+itens.get(1), "Tempo: " + (atual2/1000), pend1);
+                          n1.setLatestEventInfo(PowerTop.this, "PowerTop - Condição 02", "2º APP - Tempo: " + atual2, pend1);
                           nm1.notify(R.drawable.icon, n1);
 
 
 
 
-                          if (tempoObservacao >= ((tempo_escolhido+500) / observacao_escolhida)) {
+                          if (tempoObservacao >= (tempo_escolhido / observacao_escolhida)) {
                               if (condicaoSalvar == true){
                                   powerView.init(uidInfos[i], keyId, itens.get(1), 02, true);
                               }else
@@ -717,13 +709,13 @@ public class PowerTop extends Activity implements Runnable {
                           sz++;
 
 
-                      } else if (atual2 >= (tempo_escolhido+500)) {
+                      } else if (atual2 >= tempo_escolhido) {
                           finishActivity(1);
                           NotificationManager nm = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
                           Notification n = new Notification(R.drawable.icon, "thread1 -GERAL!- 60 segundos completos", System.currentTimeMillis());
                           PendingIntent pend = PendingIntent.getActivity(this, 0, new Intent(this, UMLogger.class), 0);
                           //n.setLatestEventInfo(this, titulo, mensagem, PendingIntent);
-                          n.setLatestEventInfo(PowerTop.this, " Avaliação Finalizada!", "Tempo Limite Atingido!", pend);
+                          n.setLatestEventInfo(PowerTop.this, "Finalizado!", "Tempo Limite Atingido!", pend);
                           nm.notify(R.drawable.icon, n);
                           finishActivity(1);
 
@@ -733,7 +725,6 @@ public class PowerTop extends Activity implements Runnable {
                           it.putExtra("NOMES_APPS", itens);
                           if (cont3 < 1) {
                               stopService(serviceIntent);
-                              counterService = null;
                                   /*super.onPause();
                                   getApplicationContext().unbindService(conn);
                                   handler.removeCallbacks(this);
@@ -801,14 +792,11 @@ public class PowerTop extends Activity implements Runnable {
   }
 
 
-
-
-    //Execução da Thread Geral
+//Execução da Thread Geral
   public void run() {
     refreshView();
     if(handler != null) {
       //Alteração Aqui - 2 anteriormente) // ALterar para salvar
-
       handler.postDelayed(this, 1 * PowerEstimator.ITERATION_INTERVAL);
     }
   }
@@ -976,7 +964,8 @@ public class PowerTop extends Activity implements Runnable {
       if (name.equalsIgnoreCase(nomeAPP)) {
         textView.setText(name + " + ENCONTRADO EM SEGUNDO PLANO! -- Consumo:" +uidInfo.key+ prefix + uidInfo.unit);
         try {
-
+          FileWriter arq = new FileWriter("/storage/emulated/0/log_" + name + ".txt", true);
+          PrintWriter gravarArq = new PrintWriter(arq, true);
           StringBuilder recebeValores = new StringBuilder();
 
           vals = recebeValores.append(uidInfo.key).toString();
@@ -1016,14 +1005,7 @@ public class PowerTop extends Activity implements Runnable {
                   somaConsumoTotal += ini.get(i);
               }
               //gravarArq.printf(Double.toString(ini.get(i))+"J\n");
-
-
-              //CASO A CONDIÇÃO DE SALVAR SEJA SELECIONADA, VAI CRIAR O ARQUI E SALVAR NELE, CASO ELE JÁ NÃO EXISTA.
-              FileWriter arq = new FileWriter("/storage/emulated/0/log_" + name + ".txt", true);
-              PrintWriter gravarArq = new PrintWriter(arq, true);
               gravarArq.printf(Double.toString(somaConsumoTotal) + "J\n");
-
-
               //SomaAplicativo.add(somaConsumoTotal);
               if (condicao == 01) {
                   SomaAplicativo01.add(somaConsumoTotal);
