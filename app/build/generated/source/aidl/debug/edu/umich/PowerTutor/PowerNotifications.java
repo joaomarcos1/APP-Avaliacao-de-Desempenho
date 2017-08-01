@@ -1,6 +1,6 @@
 /*
  * This file is auto-generated.  DO NOT MODIFY.
- * Original file: D:\\Arquivos_Programacao\\NUPASD\\AppCompare-master\\app\\src\\main\\aidl\\edu\\umich\\PowerTutor\\PowerNotifications.aidl
+ * Original file: D:\\Arquivos_Programacao\\NUPASD\\testes2\\PowerTutor-master1\\app\\src\\main\\aidl\\edu\\umich\\PowerTutor\\PowerNotifications.aidl
  */
 package edu.umich.PowerTutor;
 public interface PowerNotifications extends android.os.IInterface
