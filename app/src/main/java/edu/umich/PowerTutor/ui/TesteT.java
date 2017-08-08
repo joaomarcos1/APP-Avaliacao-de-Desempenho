@@ -31,6 +31,8 @@ public class TesteT extends Activity {
     private EditText edt_APP01, edt_APP02;
     private Button voltar;
     private Button graficos_resultados;
+    private TextView txt_ConsumoTotal_APP01;
+    private TextView txt_ConsumoTotal_APP02;
 
     ArrayList<Double> somaAPP01 = new ArrayList<Double>();
     ArrayList<Double> somaAPP02 = new ArrayList<Double>();
@@ -99,6 +101,9 @@ public class TesteT extends Activity {
         nomeAPP01 = (TextView) findViewById(R.id.txt_Nome_APP_01);
 
         nomeAPP02 = (TextView) findViewById(R.id.txt_Nome_APP_02);
+
+        txt_ConsumoTotal_APP01 = (TextView) findViewById(R.id.txt_Consumo_Total_Aplicativo_01_TESTE02);
+        txt_ConsumoTotal_APP02 = (TextView) findViewById(R.id.txt_Consumo_Total_Aplicativo_02_TESTE02);
 
 
         Bundle bnd = getIntent().getExtras();
@@ -189,14 +194,16 @@ public class TesteT extends Activity {
 
         double vetorSomasAPP01[] = new double[somaAPP01.size()];
         double vetorSomasAPP02[] = new double[somaAPP02.size()];
-
+        double consumoTotal01 = 0, consumoTotal02 = 0;
 
         for (int i = 9; i < somaAPP01.size(); i++){
             vetorSomasAPP01[i] = somaAPP01.get(i);
+            consumoTotal01 += somaAPP01.get(i);
         }
 
         for (int i = 9; i < somaAPP02.size(); i++){
             vetorSomasAPP02[i] = somaAPP02.get(i);
+            consumoTotal02 += somaAPP02.get(i);
         }
 
         TTest testT = new TTest();
@@ -205,6 +212,9 @@ public class TesteT extends Activity {
         boolean testeT = testT.homoscedasticTTest(vetorSomasAPP01, vetorSomasAPP02, 0.05);
 
 
+
+        txt_ConsumoTotal_APP01.setText(Double.toString(consumoTotal01));
+        txt_ConsumoTotal_APP02.setText(Double.toString(consumoTotal02));
         mediaAPP01.setText(Double.toString(mediaAplicativo01));
         mediaAPP02.setText(Double.toString(mediaAplicativo02));
 

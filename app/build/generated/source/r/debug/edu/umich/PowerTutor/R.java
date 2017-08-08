@@ -15,34 +15,6 @@ public final class R {
         public static final int xaxis_secs_str=0x7f070003;
     }
     public static final class attr {
-        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int circleCrop=0x7f010006;
-        /** <p>Must be a floating point value, such as "<code>1.2</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int imageAspectRatio=0x7f010005;
-        /** <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>none</code></td><td>0</td><td></td></tr>
-<tr><td><code>adjust_width</code></td><td>1</td><td></td></tr>
-<tr><td><code>adjust_height</code></td><td>2</td><td></td></tr>
-</table>
-         */
-        public static final int imageAspectRatioAdjust=0x7f010004;
         /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
 <p>This may also be a reference to a resource (in the form
@@ -77,20 +49,6 @@ containing a value of this type.
          */
         public static final int seriesType=0x7f010001;
     }
-    public static final class color {
-        public static final int common_action_bar_splitter=0x7f080000;
-        public static final int common_signin_btn_dark_text_default=0x7f080001;
-        public static final int common_signin_btn_dark_text_disabled=0x7f080002;
-        public static final int common_signin_btn_dark_text_focused=0x7f080003;
-        public static final int common_signin_btn_dark_text_pressed=0x7f080004;
-        public static final int common_signin_btn_default_background=0x7f080005;
-        public static final int common_signin_btn_light_text_default=0x7f080006;
-        public static final int common_signin_btn_light_text_disabled=0x7f080007;
-        public static final int common_signin_btn_light_text_focused=0x7f080008;
-        public static final int common_signin_btn_light_text_pressed=0x7f080009;
-        public static final int common_signin_btn_text_dark=0x7f08000a;
-        public static final int common_signin_btn_text_light=0x7f08000b;
-    }
     public static final class dimen {
         public static final int activity_horizontal_margin=0x7f060000;
         public static final int activity_vertical_margin=0x7f060001;
@@ -98,102 +56,107 @@ containing a value of this type.
     public static final class drawable {
         public static final int background=0x7f020000;
         public static final int button_blue=0x7f020001;
-        public static final int common_full_open_on_phone=0x7f020002;
-        public static final int common_ic_googleplayservices=0x7f020003;
-        public static final int help=0x7f020004;
-        public static final int icon=0x7f020005;
-        public static final int iconbut=0x7f020006;
-        public static final int iconbutabout=0x7f020007;
-        public static final int iconbutplay=0x7f020008;
-        public static final int level=0x7f020009;
-        public static final int level_1=0x7f02000a;
-        public static final int level_2=0x7f02000b;
-        public static final int level_3=0x7f02000c;
-        public static final int level_4=0x7f02000d;
-        public static final int level_5=0x7f02000e;
-        public static final int level_6=0x7f02000f;
-        public static final int level_7=0x7f020010;
-        public static final int level_8=0x7f020011;
-        public static final int level_9=0x7f020012;
-        public static final int line=0x7f020013;
-        public static final int power_off=0x7f020014;
-        public static final int power_on=0x7f020015;
-        public static final int time=0x7f020016;
-        public static final int time_0=0x7f020017;
-        public static final int time_1=0x7f020018;
-        public static final int time_10=0x7f020019;
-        public static final int time_11=0x7f02001a;
-        public static final int time_12=0x7f02001b;
-        public static final int time_2=0x7f02001c;
-        public static final int time_3=0x7f02001d;
-        public static final int time_4=0x7f02001e;
-        public static final int time_5=0x7f02001f;
-        public static final int time_6=0x7f020020;
-        public static final int time_7=0x7f020021;
-        public static final int time_8=0x7f020022;
-        public static final int time_9=0x7f020023;
-        public static final int widget_bg=0x7f020024;
+        public static final int help=0x7f020002;
+        public static final int icon=0x7f020003;
+        public static final int iconbut=0x7f020004;
+        public static final int iconbutabout=0x7f020005;
+        public static final int iconbutplay=0x7f020006;
+        public static final int level=0x7f020007;
+        public static final int level_1=0x7f020008;
+        public static final int level_2=0x7f020009;
+        public static final int level_3=0x7f02000a;
+        public static final int level_4=0x7f02000b;
+        public static final int level_5=0x7f02000c;
+        public static final int level_6=0x7f02000d;
+        public static final int level_7=0x7f02000e;
+        public static final int level_8=0x7f02000f;
+        public static final int level_9=0x7f020010;
+        public static final int line=0x7f020011;
+        public static final int power_off=0x7f020012;
+        public static final int power_on=0x7f020013;
+        public static final int time=0x7f020014;
+        public static final int time_0=0x7f020015;
+        public static final int time_1=0x7f020016;
+        public static final int time_10=0x7f020017;
+        public static final int time_11=0x7f020018;
+        public static final int time_12=0x7f020019;
+        public static final int time_2=0x7f02001a;
+        public static final int time_3=0x7f02001b;
+        public static final int time_4=0x7f02001c;
+        public static final int time_5=0x7f02001d;
+        public static final int time_6=0x7f02001e;
+        public static final int time_7=0x7f02001f;
+        public static final int time_8=0x7f020020;
+        public static final int time_9=0x7f020021;
+        public static final int widget_bg=0x7f020022;
     }
     public static final class id {
-        public static final int adjust_height=0x7f0a0000;
-        public static final int adjust_width=0x7f0a0001;
-        public static final int appviewerbutton=0x7f0a002e;
-        public static final int btn_Salvar_Graficos_TesteT=0x7f0a000d;
-        public static final int btn_Salvar_Relatorios__TesteT=0x7f0a000e;
-        public static final int btn_Voltar_Tela_TesteT=0x7f0a001a;
-        public static final int btn_confirmar=0x7f0a0007;
-        public static final int btn_graficos_resultados=0x7f0a002b;
-        public static final int btn_voltar_logs_apps=0x7f0a0005;
-        public static final int btn_voltar_preferencias_execucao_Teste=0x7f0a0010;
-        public static final int btn_voltar_tela_graficos=0x7f0a000b;
-        public static final int btn_voltar_teste_01_app=0x7f0a0019;
-        public static final int cancel_button=0x7f0a0036;
-        public static final int chart=0x7f0a0009;
-        public static final int chart2=0x7f0a000a;
-        public static final int chart3=0x7f0a000c;
-        public static final int chart_teste_01_app=0x7f0a0018;
-        public static final int checkBox=0x7f0a000f;
-        public static final int chk_SalvarDadosEmLOG_TelaSelecaoDeAPPS=0x7f0a0006;
-        public static final int expandableListView=0x7f0a0003;
-        public static final int list=0x7f0a0034;
-        public static final int listView_Aplicativos_Instalados=0x7f0a0004;
-        public static final int none=0x7f0a0002;
-        public static final int power_button=0x7f0a0037;
-        public static final int save_button=0x7f0a0035;
-        public static final int servicestartbutton=0x7f0a002d;
-        public static final int summary=0x7f0a0031;
-        public static final int sysviewerbutton=0x7f0a002f;
-        public static final int textView=0x7f0a0008;
-        public static final int textView10=0x7f0a0023;
-        public static final int textView11=0x7f0a0024;
-        public static final int textView12=0x7f0a0013;
-        public static final int textView13=0x7f0a0014;
-        public static final int textView14=0x7f0a0027;
-        public static final int textView17=0x7f0a0029;
-        public static final int textView4=0x7f0a002c;
-        public static final int textView5=0x7f0a001e;
-        public static final int textView7=0x7f0a0020;
-        public static final int textView8=0x7f0a0012;
-        public static final int textView9=0x7f0a001d;
-        public static final int text_day=0x7f0a003a;
-        public static final int text_hour=0x7f0a0039;
-        public static final int text_minute=0x7f0a0038;
-        public static final int title=0x7f0a0030;
-        public static final int txt_DesvioPadrao_APP01=0x7f0a0021;
-        public static final int txt_DesvioPadrao_APP02=0x7f0a0025;
-        public static final int txt_Desvio_Padrao_Teste_01_APP=0x7f0a0017;
-        public static final int txt_Media_APP01=0x7f0a001f;
-        public static final int txt_Media_APP02=0x7f0a0026;
-        public static final int txt_Nome_APP_01=0x7f0a001b;
-        public static final int txt_Nome_APP_02=0x7f0a001c;
-        public static final int txt_Nome_APP_TESTE_01_APP=0x7f0a0011;
-        public static final int txt_PowerTabs=0x7f0a0033;
-        public static final int txt_Variancia_APP01=0x7f0a0022;
-        public static final int txt_Variancia_APP02=0x7f0a0028;
-        public static final int txt_media_teste_01_APP=0x7f0a0015;
-        public static final int txt_resultadoTesteT=0x7f0a002a;
-        public static final int variancia_teste_01_APP=0x7f0a0016;
-        public static final int widget_frame=0x7f0a0032;
+        public static final int appviewerbutton=0x7f080033;
+        public static final int btn_Salvar_Graficos_TesteT=0x7f08000b;
+        public static final int btn_Salvar_Relatorios__TesteT=0x7f08000c;
+        public static final int btn_Voltar_Tela_TesteT=0x7f08001b;
+        public static final int btn_confirmar=0x7f080005;
+        public static final int btn_graficos_resultados=0x7f080025;
+        public static final int btn_voltar_logs_apps=0x7f080003;
+        public static final int btn_voltar_preferencias_execucao_Teste=0x7f08000f;
+        public static final int btn_voltar_tela_graficos=0x7f080009;
+        public static final int btn_voltar_teste_01_app=0x7f080018;
+        public static final int button_send=0x7f08000d;
+        public static final int cancel_button=0x7f08003d;
+        public static final int chart=0x7f080007;
+        public static final int chart2=0x7f080008;
+        public static final int chart3=0x7f08000a;
+        public static final int chart_teste_01_app=0x7f080014;
+        public static final int checkBox=0x7f08000e;
+        public static final int chk_SalvarDadosEmLOG_TelaSelecaoDeAPPS=0x7f080004;
+        public static final int crash_reporting_present=0x7f080000;
+        public static final int expandableListView=0x7f080001;
+        public static final int list=0x7f08003b;
+        public static final int listView_Aplicativos_Instalados=0x7f080002;
+        public static final int power_button=0x7f08003e;
+        public static final int save_button=0x7f08003c;
+        public static final int servicestartbutton=0x7f080032;
+        public static final int summary=0x7f080036;
+        public static final int sysviewerbutton=0x7f080034;
+        public static final int textView=0x7f080006;
+        public static final int textView10=0x7f080026;
+        public static final int textView11=0x7f080028;
+        public static final int textView12=0x7f080012;
+        public static final int textView13=0x7f080013;
+        public static final int textView14=0x7f080029;
+        public static final int textView15=0x7f08001e;
+        public static final int textView17=0x7f08002d;
+        public static final int textView2=0x7f080019;
+        public static final int textView3=0x7f08002f;
+        public static final int textView4=0x7f080031;
+        public static final int textView5=0x7f08001f;
+        public static final int textView7=0x7f080023;
+        public static final int textView8=0x7f080011;
+        public static final int textView9=0x7f080020;
+        public static final int textView_row_author=0x7f080039;
+        public static final int textView_row_message=0x7f08003a;
+        public static final int text_day=0x7f080041;
+        public static final int text_hour=0x7f080040;
+        public static final int text_minute=0x7f08003f;
+        public static final int title=0x7f080035;
+        public static final int txt_Consumo_Total_APP_Teste_01_APP=0x7f08001a;
+        public static final int txt_Consumo_Total_Aplicativo_01_TESTE02=0x7f080030;
+        public static final int txt_Consumo_Total_Aplicativo_02_TESTE02=0x7f080027;
+        public static final int txt_DesvioPadrao_APP01=0x7f080024;
+        public static final int txt_DesvioPadrao_APP02=0x7f08002c;
+        public static final int txt_Desvio_Padrao_Teste_01_APP=0x7f080017;
+        public static final int txt_Media_APP01=0x7f080021;
+        public static final int txt_Media_APP02=0x7f08002a;
+        public static final int txt_Nome_APP_01=0x7f08001c;
+        public static final int txt_Nome_APP_02=0x7f08001d;
+        public static final int txt_Nome_APP_TESTE_01_APP=0x7f080010;
+        public static final int txt_PowerTabs=0x7f080038;
+        public static final int txt_Variancia_APP01=0x7f080022;
+        public static final int txt_Variancia_APP02=0x7f08002b;
+        public static final int txt_media_teste_01_APP=0x7f080015;
+        public static final int txt_resultadoTesteT=0x7f08002e;
+        public static final int variancia_teste_01_APP=0x7f080016;
+        public static final int widget_frame=0x7f080037;
     }
     public static final class integer {
         public static final int google_play_services_version=0x7f090000;
@@ -209,58 +172,28 @@ containing a value of this type.
         public static final int misc_item_layout=0x7f030007;
         public static final int misc_layout=0x7f030008;
         public static final int power_tabs=0x7f030009;
-        public static final int widget_configure=0x7f03000a;
-        public static final int widget_item_layout=0x7f03000b;
-        public static final int widget_layout=0x7f03000c;
+        public static final int row_message=0x7f03000a;
+        public static final int widget_configure=0x7f03000b;
+        public static final int widget_item_layout=0x7f03000c;
+        public static final int widget_layout=0x7f03000d;
     }
     public static final class string {
-        public static final int Label_dois_aplicativos=0x7f05001e;
-        public static final int app_name=0x7f05001f;
-        public static final int auth_google_play_services_client_facebook_display_name=0x7f050020;
-        public static final int auth_google_play_services_client_google_display_name=0x7f050021;
-        public static final int common_android_wear_notification_needs_update_text=0x7f050000;
-        public static final int common_android_wear_update_text=0x7f050001;
-        public static final int common_android_wear_update_title=0x7f050002;
-        public static final int common_google_play_services_api_unavailable_text=0x7f050003;
-        public static final int common_google_play_services_enable_button=0x7f050004;
-        public static final int common_google_play_services_enable_text=0x7f050005;
-        public static final int common_google_play_services_enable_title=0x7f050006;
-        public static final int common_google_play_services_error_notification_requested_by_msg=0x7f050007;
-        public static final int common_google_play_services_install_button=0x7f050008;
-        public static final int common_google_play_services_install_text_phone=0x7f050009;
-        public static final int common_google_play_services_install_text_tablet=0x7f05000a;
-        public static final int common_google_play_services_install_title=0x7f05000b;
-        public static final int common_google_play_services_invalid_account_text=0x7f05000c;
-        public static final int common_google_play_services_invalid_account_title=0x7f05000d;
-        public static final int common_google_play_services_needs_enabling_title=0x7f05000e;
-        public static final int common_google_play_services_network_error_text=0x7f05000f;
-        public static final int common_google_play_services_network_error_title=0x7f050010;
-        public static final int common_google_play_services_notification_needs_update_title=0x7f050011;
-        public static final int common_google_play_services_notification_ticker=0x7f050012;
-        public static final int common_google_play_services_sign_in_failed_text=0x7f050013;
-        public static final int common_google_play_services_sign_in_failed_title=0x7f050014;
-        public static final int common_google_play_services_unknown_issue=0x7f050015;
-        public static final int common_google_play_services_unsupported_text=0x7f050016;
-        public static final int common_google_play_services_unsupported_title=0x7f050017;
-        public static final int common_google_play_services_update_button=0x7f050018;
-        public static final int common_google_play_services_update_text=0x7f050019;
-        public static final int common_google_play_services_update_title=0x7f05001a;
-        public static final int common_google_play_services_updating_text=0x7f05001b;
-        public static final int common_google_play_services_updating_title=0x7f05001c;
-        public static final int common_open_on_phone=0x7f05001d;
-        public static final int confirmar_escolha_apps=0x7f050022;
-        public static final int help_head=0x7f050023;
-        public static final int help_text=0x7f050024;
-        public static final int not_running_on_startup=0x7f050025;
-        public static final int running_on_startup=0x7f050026;
-        public static final int start_sending_text=0x7f050027;
-        public static final int stop_sending_text=0x7f050028;
-        public static final int term=0x7f050029;
-        public static final int unknown_phone=0x7f05002a;
-        public static final int url_1=0x7f05002b;
-        public static final int url_2=0x7f05002c;
-        public static final int voltar_tela_log_aps=0x7f05002d;
-        public static final int voltar_tela_teste_01app=0x7f05002e;
+        public static final int Label_dois_aplicativos=0x7f050001;
+        public static final int app_name=0x7f050002;
+        public static final int common_google_play_services_unknown_issue=0x7f050000;
+        public static final int confirmar_escolha_apps=0x7f050003;
+        public static final int help_head=0x7f050004;
+        public static final int help_text=0x7f050005;
+        public static final int not_running_on_startup=0x7f050006;
+        public static final int running_on_startup=0x7f050007;
+        public static final int start_sending_text=0x7f050008;
+        public static final int stop_sending_text=0x7f050009;
+        public static final int term=0x7f05000a;
+        public static final int unknown_phone=0x7f05000b;
+        public static final int url_1=0x7f05000c;
+        public static final int url_2=0x7f05000d;
+        public static final int voltar_tela_log_aps=0x7f05000e;
+        public static final int voltar_tela_teste_01app=0x7f05000f;
     }
     public static final class xml {
         public static final int preferences=0x7f040000;
@@ -353,68 +286,5 @@ containing a value of this type.
           @attr name edu.umich.PowerTutor:seriesType
         */
         public static final int GraphViewXML_seriesType = 2;
-        /** Attributes that can be used with a LoadingImageView.
-           <p>Includes the following attributes:</p>
-           <table>
-           <colgroup align="left" />
-           <colgroup align="left" />
-           <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #LoadingImageView_circleCrop edu.umich.PowerTutor:circleCrop}</code></td><td></td></tr>
-           <tr><td><code>{@link #LoadingImageView_imageAspectRatio edu.umich.PowerTutor:imageAspectRatio}</code></td><td></td></tr>
-           <tr><td><code>{@link #LoadingImageView_imageAspectRatioAdjust edu.umich.PowerTutor:imageAspectRatioAdjust}</code></td><td></td></tr>
-           </table>
-           @see #LoadingImageView_circleCrop
-           @see #LoadingImageView_imageAspectRatio
-           @see #LoadingImageView_imageAspectRatioAdjust
-         */
-        public static final int[] LoadingImageView = {
-            0x7f010004, 0x7f010005, 0x7f010006
-        };
-        /**
-          <p>This symbol is the offset where the {@link edu.umich.PowerTutor.R.attr#circleCrop}
-          attribute's value can be found in the {@link #LoadingImageView} array.
-
-
-          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name edu.umich.PowerTutor:circleCrop
-        */
-        public static final int LoadingImageView_circleCrop = 2;
-        /**
-          <p>This symbol is the offset where the {@link edu.umich.PowerTutor.R.attr#imageAspectRatio}
-          attribute's value can be found in the {@link #LoadingImageView} array.
-
-
-          <p>Must be a floating point value, such as "<code>1.2</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name edu.umich.PowerTutor:imageAspectRatio
-        */
-        public static final int LoadingImageView_imageAspectRatio = 1;
-        /**
-          <p>This symbol is the offset where the {@link edu.umich.PowerTutor.R.attr#imageAspectRatioAdjust}
-          attribute's value can be found in the {@link #LoadingImageView} array.
-
-
-          <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>none</code></td><td>0</td><td></td></tr>
-<tr><td><code>adjust_width</code></td><td>1</td><td></td></tr>
-<tr><td><code>adjust_height</code></td><td>2</td><td></td></tr>
-</table>
-          @attr name edu.umich.PowerTutor:imageAspectRatioAdjust
-        */
-        public static final int LoadingImageView_imageAspectRatioAdjust = 0;
     };
 }

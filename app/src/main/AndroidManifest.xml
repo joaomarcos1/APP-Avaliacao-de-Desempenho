@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="edu.umich.PowerTutor"
     android:versionCode="15"
-    android:versionName="1.5">
+    android:versionName="1.5" >
 
     <uses-sdk android:minSdkVersion="3" />
 
@@ -12,87 +12,86 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-
-
 
     <application
         android:icon="@drawable/icon"
-        android:label="@string/app_name">
+        android:label="@string/app_name" >
         <activity
             android:name=".ui.UMLogger"
             android:label="@string/app_name"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.Help">
+        <activity android:name=".ui.Help" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.PowerViewer">
+        <activity android:name=".ui.PowerViewer" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
         <activity
             android:name=".ui.PowerTop"
-            android:label="Power Top">
+            android:label="Power Top" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.PowerPie">
+        <activity android:name=".ui.PowerPie" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.MiscView">
+        <activity android:name=".ui.MiscView" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
         <activity
             android:name=".ui.PowerTabs"
-            android:theme="@android:style/Theme.NoTitleBar">
+            android:theme="@android:style/Theme.NoTitleBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
         <activity
             android:name=".ui.EditPreferences"
-            android:label="PowerTutor Options">
+            android:label="PowerTutor Options" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
         <activity
             android:name=".ui.ViewerPreferences"
-            android:label="PowerTutor History Options">
+            android:label="PowerTutor History Options" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
         <activity
             android:name=".widget.Configure"
-            android:label="Configure PowerTutor Widget">
+            android:label="Configure PowerTutor Widget" >
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
             </intent-filter>
         </activity>
         <activity
             android:name=".widget.DataSourceConfigure"
-            android:label="Configure Data Source">
+            android:label="Configure Data Source" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
 
-        <receiver android:name=".ui.StartupReceiver">
+        <receiver android:name=".ui.StartupReceiver" >
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
 
@@ -102,7 +101,7 @@
 
         <service android:name=".service.UMLoggerService" />
 
-        <receiver android:name=".widget.PowerWidget">
+        <receiver android:name=".widget.PowerWidget" >
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
@@ -126,7 +125,7 @@
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
-        <activity android:name=".ui.resultados_teste_01_app"></activity>
+        <activity android:name=".ui.resultados_teste_01_app" />
     </application>
 
 </manifest>

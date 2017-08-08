@@ -121,13 +121,13 @@ public class PowerTop extends Activity implements Runnable {
   int Sequenciaplicativo = 0;
 
   long inicial1 = System.currentTimeMillis();
-  long atual1, atual2, inicial2, atual0;
+  long atual1 = 0, atual2, inicial2, atual0 = 0;
   long tempoTotal;
 
   Intent it1, it2;
 
-  public static ArrayList<Double> SomaAplicativo01 = new ArrayList<Double>();
-  public static ArrayList<Double> SomaAplicativo02 = new ArrayList<Double>();
+  static  ArrayList<Double> SomaAplicativo01 = new ArrayList<Double>();
+  static ArrayList<Double> SomaAplicativo02 = new ArrayList<Double>();
 
     int app = 01;
   Intent it;
@@ -135,15 +135,33 @@ public class PowerTop extends Activity implements Runnable {
 
     boolean condicaoSalvar;
 
+    boolean salvamento = false;
+
     long tempoObservacao;
 
     int quantidade_apps = 0;
+
+
+    int aux;
+
+    int contador_observacoes_APP01 = 0, contador_observacoes_APP02 = 0;
+    boolean finalizado01 = false;
+
+    static int contador_observacoes = 0;
 
 
 
   @Override
   public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
+        contador_observacoes = 0;
+
+      //Limpando ArrayList Para não entrar com lixo de testes anteriores
+      itens.clear();
+      pacotes.clear();
+      SomaAplicativo01.clear();
+      SomaAplicativo02.clear();
+
 
     //Teste para criaçao de notificação
 
@@ -199,15 +217,15 @@ public class PowerTop extends Activity implements Runnable {
 
 
     tempoTotal = tempo_escolhido;
+
     if (quantidade_apps == 01) {
-        Toast.makeText(PowerTop.this, "Tempo escolhido (tela PowerTop): " + tempoTotal, Toast.LENGTH_SHORT).show();
+        Toast.makeText(PowerTop.this, "Quantidade de observações escolhidas: " + observacao_escolhida, Toast.LENGTH_SHORT).show();
         Toast.makeText(PowerTop.this, "Pacote 01: " + pacotes.get(0), Toast.LENGTH_SHORT).show();
     }else if (quantidade_apps == 02) {
         Toast.makeText(PowerTop.this, "Tempo escolhido (tela PowerTop): " + tempoTotal, Toast.LENGTH_SHORT).show();
         Toast.makeText(PowerTop.this, "Pacote 01: " + pacotes.get(0), Toast.LENGTH_SHORT).show();
         Toast.makeText(PowerTop.this, "Pacote 02: " + pacotes.get(1), Toast.LENGTH_SHORT).show();
     }
-
 
 
     it =  new Intent(PowerTop.this, TesteT.class);
@@ -223,135 +241,6 @@ public class PowerTop extends Activity implements Runnable {
     }
 
 
-      //final int finalI = i;
-    /*
-      new Thread() {
-        @Override
-        public void run() {
-          contador[0]++;
-          long inicial = System.currentTimeMillis();
-          long atual = 0, total = 0;
-
-
-          int tempoTotal = tempo_escolhido, quantIntervalo = intervalo_escolhido;
-
-          //tempo total
-          long inicial1 = System.currentTimeMillis();
-          long atual1 = 0;
-
-          int ct = 0, counter = 0;
-
-          long total1 = 0;
-
-            while (total1 <= tempoTotal) {
-
-              atual1 = System.currentTimeMillis();
-              total1 = atual1 - inicial1;
-
-              //300 000 ms equivalem à 5 minutos
-              //60 000 ms equivalem à 1 minuto
-
-              if (total > (tempoTotal / quantIntervalo)) {
-                total = 0;
-              }
-
-              while (total <= (tempoTotal / quantIntervalo)) {
-
-                atual = System.currentTimeMillis();
-                total = atual - inicial;
-
-                if (total > (tempoTotal / quantIntervalo)) {
-                  PendingIntent pend1 = PendingIntent.getActivity(PowerTop.this, 0, new Intent(PowerTop.this, UMLogger.class), 0);
-                  n1.setLatestEventInfo(PowerTop.this, "INTERNA", total/1000+" segs completos", pend1);
-                  nm1.notify(R.drawable.icon, n1);
-                }
-
-              }
-
-
-              if (total1 >= tempoTotal) {
-                PendingIntent pend1 = PendingIntent.getActivity(PowerTop.this, 0, new Intent(PowerTop.this, UMLogger.class), 0);
-                n1.setLatestEventInfo(PowerTop.this, "EXTERNO - Finalizado!", "tempo total Finalizado!" + total1, pend1);
-                nm1.notify(R.drawable.icon, n1);
-              }
-
-
-            }
-          }
-
-        }.start();*/
-      
-
-
-
-
-    /*new Thread() {
-      @Override
-      public void run() {
-      long inicial = System.currentTimeMillis();
-      long atual = 0, total = 0;
-
-      Intent it = getPackageManager().getLaunchIntentForPackage(itens.get(0));
-
-      startActivity(it);
-        //300 000 ms equivalem à 5 minutos
-        //60 000 ms equivalem à 1 minuto
-      while(total<=60000) {
-        atual = System.currentTimeMillis();
-        total = atual - inicial;
-        tempo = total;*/
-
-/*
-        new Thread() {
-          public void run() {
-            Intent it = getPackageManager().getLaunchIntentForPackage(itens.get(0));
-            startActivity(it);
-            int contador = 0;
-            long inicial1 = System.currentTimeMillis();
-            long atual1 = 0, total1 = 0;
-            while (total1 <= 20000){
-              atual1 = System.currentTimeMillis();
-              total1 = atual1 - inicial1;
-              //nm1.notify(R.drawable.icon, n1);
-              cont2++;
-              contador++;
-
-
-              new Thread(){
-                @Override
-                public void run(){
-                  int contador1 = 0;
-                  long inicial = System.currentTimeMillis();
-                  long atual = 0, total = 0;
-
-                  while(total<=5000) {
-                    atual = System.currentTimeMillis();
-                    total = atual - inicial;
-                  }
-
-                  //n.setLatestEventInfo(this, titulo, mensagem, PendingIntent);
-                  PendingIntent pend1 = PendingIntent.getActivity(PowerTop.this, 0, new Intent(PowerTop.this, UMLogger.class), 0);
-                  n1.setLatestEventInfo(PowerTop.this, "Thread TESTE - INTERNA", "10segs - T400 /- Cont: "+total, pend1);
-                  nm1.notify(R.drawable.icon, n1);
-
-                }
-              }.start();
-            }
-
-            //n.setLatestEventInfo(this, titulo, mensagem, PendingIntent);
-            PendingIntent pend1 = PendingIntent.getActivity(PowerTop.this, 0, new Intent(PowerTop.this, UMLogger.class), 0);
-          n1.setLatestEventInfo(PowerTop.this, "EXTERNA", "10segs - T2 /- Cont: "+total1, pend1);
-            nm1.notify(R.drawable.icon, n1);
-          }
-        }.start();
-        /*nm.notify(R.drawable.icon, n);
-        cont1++;*/
-
-
-/*
-    }
-  }.start();*/
-
 
     String pacote = null;
 
@@ -359,6 +248,8 @@ public class PowerTop extends Activity implements Runnable {
     serviceIntent = new Intent(this, UMLoggerService.class);
     conn = new CounterServiceConnection();
 
+
+      aux = tempo_escolhido/observacao_escolhida;
 
     if(savedInstanceState != null) {
       componentNames = savedInstanceState.getStringArray("componentNames");
@@ -546,9 +437,289 @@ public class PowerTop extends Activity implements Runnable {
           if (quantidade_apps == 01){
 
 
+
+              //DELAY PARA DAR TEMPO  O APLICATIVO SER ABERTO, ASSIM O TESTE PODERA OCORRER NO SEU TEMPO NORMAL
+/*
+              if (cont1 < 1) {
+                  Toast.makeText(PowerTop.this, "Iniciando "+itens.get(0), Toast.LENGTH_SHORT).show();
+                  startActivity(it1);
+                  cont1++;
+              }
+
+
+              if (atual0 <= 5000){
+                  atual0 = System.currentTimeMillis() - inicial1;
+              }else {
+                  if (cont4 < 1) {
+                      inicial1 = System.currentTimeMillis();
+                      cont4++;
+                  }
+
+
+                  if (contador_observacoes <= observacao_escolhida) {
+
+                      //contador_aplicativos++;
+
+                     //atual1  = System.currentTimeMillis() - inicial1;
+
+                      //if (atual1 <= 2000) {//Dentro do que o usuário quer/SELECIONOU COMO PARÂMETROS DA AVALIAÇÃO . O QUE ESTÁ ABAIXO É O QUE DEVE ACONTECER DURANTE A EXECUÇÃO DO TESTE
+                          NotificationManager nm = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+                          Notification n = new Notification(R.drawable.icon, "thread1 -GERAL!- 60 segundos completos", System.currentTimeMillis());
+                          PendingIntent pend = PendingIntent.getActivity(this, 0, new Intent(this, UMLogger.class), 0);
+                          //n.setLatestEventInfo(this, titulo, mensagem, PendingIntent);
+                          n.setLatestEventInfo(PowerTop.this, "Avaliando " + itens.get(0), "Observações: " + contador_observacoes+" - Tempo: "+atual1, pend);
+
+                          nm.notify(R.drawable.icon, n);
+
+
+                      //} else {
+                          //CASO O TEMPODA OBSERVAÇÃO SEJA ATINGIDO
+
+
+                          if (condicaoSalvar == true) {
+                              powerView.init(uidInfos[i], keyId, itens.get(0), 01, true);
+                              Toast.makeText(PowerTop.this, "Condição Salvar - TRUE!", Toast.LENGTH_SHORT).show();
+                          } else {
+                              powerView.init(uidInfos[i], keyId, itens.get(0), 01, false);
+                              Toast.makeText(PowerTop.this, "Condição Salvar - FALSE!", Toast.LENGTH_SHORT).show();
+                          }
+
+
+
+
+                          //cont4 = 0;
+                          contador_observacoes++;
+                          sz++;
+                     //}
+                  }else {//Se quantidade de observações até agora é menor ou igual que a escolhida
+                      cont4 = 0;
+                      finishActivity(1);//finalizar o único aplicativo aberto
+                      stopService(serviceIntent);//Finalizar a service que faz a verificação de consumo de energi, que está rodando em segundo plano
+                      counterService = null;//Finalizar serviço rodando em segundo plano
+                      handler = null;
+                      //Toast.makeText(PowerTop.this, "Teste Finalizado! Exibindo Resultados", Toast.LENGTH_SHORT).show();
+                      /// /startActivity(it);//abrir tela
+                      Intent it0 = new Intent(PowerTop.this, resultados_teste_01_app.class);
+                      it0.putExtra("APLICATIVO01", SomaAplicativo01);//MANDANDO SOMA DOS CONSUMOS ENERGETICOS CALCULADAS
+                      //it0.putExtra("APLICATIVO01", arr);
+                      //MANDA R NOME E PACOTE DOS APLICATIVOS
+                      it0.putExtra("NOME_APP", itens.get(0));
+                      startActivity(it0);
+
+                  }
+
+              }*/
+
+
+
+
+
+              /*
+              //DELAY PARA DAR TEMPO  O APLICATIVO SER ABERTO, ASSIM O TESTE PODERA OCORRER NO SEU TEMPO NORMAL
+
+              if (cont1 < 1) {
+                  Toast.makeText(PowerTop.this, "Iniciando "+itens.get(0), Toast.LENGTH_SHORT).show();
+                  startActivity(it1);
+                  cont1++;
+              }
+              if (atual0 <= 5000){
+                  atual0 = System.currentTimeMillis() - inicial1;
+              }else {
+                  if (cont4 < 1) {
+                      inicial1 = System.currentTimeMillis();
+                      cont4++;
+                  }
+
+                  //contador_aplicativos++;
+                  atual1 = System.currentTimeMillis() - inicial1;
+
+                  //long aux = tempo_escolhido/observacao_escolhida;
+                  //aux = contador_aplicativos * 1000;
+                  //tempoObservacao += 1000;
+                  tempoObservacao += 900;
+
+                  //if (atual1 <= tempo_escolhido) {
+                  if (atual1 <= tempo_escolhido) {
+                      NotificationManager nm = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+                      Notification n = new Notification(R.drawable.icon, "thread1 -GERAL!- 60 segundos completos", System.currentTimeMillis());
+                      PendingIntent pend = PendingIntent.getActivity(this, 0, new Intent(this, UMLogger.class), 0);
+                      //n.setLatestEventInfo(this, titulo, mensagem, PendingIntent);
+                      n.setLatestEventInfo(PowerTop.this, "Avaliando " + itens.get(0), "Tempo: " + atual1, pend);
+
+                      nm.notify(R.drawable.icon, n);
+
+
+                      if (tempoObservacao >= (tempo_escolhido / observacao_escolhida)) {
+                          if (condicaoSalvar == true) {
+                              powerView.init(uidInfos[i], keyId, itens.get(0), 01, true);
+                          } else
+                              powerView.init(uidInfos[i], keyId, itens.get(0), 01, false);
+
+                          tempoObservacao = 0;
+                      } else {
+                          if (condicaoSalvar == true) {
+                              powerView.init(uidInfos[i], keyId, itens.get(0), 01, true);
+                          } else
+                              powerView.init(uidInfos[i], keyId, itens.get(0), 01, false);
+                          powerView.init(uidInfos[i], keyId, itens.get(0), 01, false);
+                      }
+                      sz++;
+                      //} else if (atual1 > tempo_escolhido) {
+                  } else if (atual1 > tempo_escolhido) {
+                      cont4 = 0;
+                      finishActivity(1);//finalizar o único aplicativo aberto
+                      stopService(serviceIntent);//Finalizar a service que faz a verificação de consumo de energi, que está rodando em segundo plano
+                      counterService = null;//Finalizar serviço rodando em segundo plano
+                      handler = null;
+                      Toast.makeText(PowerTop.this, "Teste Finalizado! Exibindo Resultados", Toast.LENGTH_SHORT).show();
+                      /// /startActivity(it);//abrir tela
+                      Intent it0 = new Intent(PowerTop.this, resultados_teste_01_app.class);
+                      it0.putExtra("APLICATIVO01", SomaAplicativo01);//MANDANDO SOMA DOS CONSUMOS ENERGETICOS CALCULADAS
+                      //MANDA R NOME E PACOTE DOS APLICATIVOS
+                      it0.putExtra("NOME_APP", itens.get(0));
+                      startActivity(it0);
+                  }
+              }*/
+
+
+
+
+        /*
               //DELAY PARA DAR TEMPO  O APLICATIVO SER ABERTO, ASSIM O TESTE PODERA OCORRER NO SEU TEMPO NORMAL
               if (cont1 < 1) {
-                  Toast.makeText(PowerTop.this, "Iniciando Aplicativo!", Toast.LENGTH_SHORT).show();
+                  Toast.makeText(PowerTop.this, "Iniciando "+itens.get(0), Toast.LENGTH_SHORT).show();
+                  startActivity(it1);
+                  inicial1 = System.currentTimeMillis();
+                  cont1++;
+              }
+              if (atual0 <= 5000){
+                  atual0 = System.currentTimeMillis() - inicial1;
+              }else {
+                  if (cont4 < 1) {
+                      inicial1 = System.currentTimeMillis();
+                      cont4++;
+                  } else {
+                      atual1 = System.currentTimeMillis() - inicial1;
+                      if (atual1 >= 2000 && atual1 <= 2500){
+                          if (contador_observacoes <= observacao_escolhida) {
+                              finalizado01 = false;
+
+                          }else{
+                              finalizado01 = true;
+                          }
+
+                          if (atual1 >2500){
+                              //cont4 = 0;
+                              Notification n = new Notification(R.drawable.icon, "thread1 -GERAL!- 60 segundos completos", System.currentTimeMillis());
+                              PendingIntent pend = PendingIntent.getActivity(this, 0, new Intent(this, UMLogger.class), 0);
+                              //n.setLatestEventInfo(this, titulo, mensagem, PendingIntent);
+                              n.setLatestEventInfo(PowerTop.this, "Finalizado!", "Limite de observações atingido!", pend);
+                          }
+                      }else {
+                          //atual1 = System.currentTimeMillis() - inicial1;
+                          finalizado01 = true;
+                      }
+
+
+
+                    if (finalizado01 == true) {
+                            //(abaixo) O QUE FAZER QUANDO TODAS AS OBSERVAÇÕES FORAM FEITAS
+                            cont4 = 0;
+                            finishActivity(1);//finalizar o único aplicativo aberto
+                            stopService(serviceIntent);//Finalizar a service que faz a verificação de consumo de energi, que está rodando em segundo plano
+                            counterService = null;//Finalizar serviço rodando em segundo plano
+                            handler = null;
+                            Toast.makeText(PowerTop.this, "Teste Finalizado! Exibindo Resultados", Toast.LENGTH_SHORT).show();
+                            /// /startActivity(it);//abrir tela
+                            Intent it0 = new Intent(PowerTop.this, resultados_teste_01_app.class);
+                            it0.putExtra("APLICATIVO01", SomaAplicativo01);//MANDANDO SOMA DOS CONSUMOS ENERGETICOS CALCULADAS
+                            //MANDA R NOME E PACOTE DOS APLICATIVOS
+                            it0.putExtra("NOME_APP", itens.get(0));
+                            startActivity(it0);
+
+                    }else{
+                        NotificationManager nm = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+                        Notification n = new Notification(R.drawable.icon, "thread1 -GERAL!- 60 segundos completos", System.currentTimeMillis());
+                        PendingIntent pend = PendingIntent.getActivity(this, 0, new Intent(this, UMLogger.class), 0);
+                        //n.setLatestEventInfo(this, titulo, mensagem, PendingIntent);
+                        n.setLatestEventInfo(PowerTop.this, "Avaliando " + itens.get(0), "Observação: " + contador_observacoes, pend);
+
+                        nm.notify(R.drawable.icon, n);
+
+                        //atual1 = System.currentTimeMillis() - inicial1;
+
+                        //Tempo TOTAL para a observação, caso atingido, será feita outra
+                        if (condicaoSalvar == true) {
+                            powerView.init(uidInfos[i], keyId, itens.get(0), 01, true);
+                        } else
+                            powerView.init(uidInfos[i], keyId, itens.get(0), 01, false);
+
+                        sz++;
+                        contador_observacoes++;
+                    }
+
+
+                  }
+
+                  //contador_aplicativos++;
+
+
+                  //long aux = tempo_escolhido/observacao_escolhida;
+                  //aux = contador_aplicativos * 1000;
+                  //tempoObservacao += 1000;
+                  /*tempoObservacao += 900;
+
+                  //if (atual1 <= tempo_escolhido) {
+                  if (atual1 <= tempo_escolhido) {
+                      NotificationManager nm = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+                      Notification n = new Notification(R.drawable.icon, "thread1 -GERAL!- 60 segundos completos", System.currentTimeMillis());
+                      PendingIntent pend = PendingIntent.getActivity(this, 0, new Intent(this, UMLogger.class), 0);
+                      //n.setLatestEventInfo(this, titulo, mensagem, PendingIntent);
+                      n.setLatestEventInfo(PowerTop.this, "Avaliando " + itens.get(0), "Tempo: " + atual1, pend);
+
+                      nm.notify(R.drawable.icon, n);
+
+
+                      if (tempoObservacao >= (tempo_escolhido / observacao_escolhida)) {
+                          if (condicaoSalvar == true) {
+                              powerView.init(uidInfos[i], keyId, itens.get(0), 01, true);
+                          } else
+                              powerView.init(uidInfos[i], keyId, itens.get(0), 01, false);
+
+                          tempoObservacao = 0;
+                      } else {
+                          if (condicaoSalvar == true) {
+                              powerView.init(uidInfos[i], keyId, itens.get(0), 01, true);
+                          } else
+                              powerView.init(uidInfos[i], keyId, itens.get(0), 01, false);
+                          powerView.init(uidInfos[i], keyId, itens.get(0), 01, false);
+                      }
+                      sz++;
+                      //} else if (atual1 > tempo_escolhido) {
+                  } else if (atual1 > tempo_escolhido) {
+                      cont4 = 0;
+                      finishActivity(1);//finalizar o único aplicativo aberto
+                      stopService(serviceIntent);//Finalizar a service que faz a verificação de consumo de energi, que está rodando em segundo plano
+                      counterService = null;//Finalizar serviço rodando em segundo plano
+                      handler = null;
+                      Toast.makeText(PowerTop.this, "Teste Finalizado! Exibindo Resultados", Toast.LENGTH_SHORT).show();
+                      /// /startActivity(it);//abrir tela
+                      Intent it0 = new Intent(PowerTop.this, resultados_teste_01_app.class);
+                      it0.putExtra("APLICATIVO01", SomaAplicativo01);//MANDANDO SOMA DOS CONSUMOS ENERGETICOS CALCULADAS
+                      //MANDA R NOME E PACOTE DOS APLICATIVOS
+                      it0.putExtra("NOME_APP", itens.get(0));
+                      startActivity(it0);
+                  }
+              }
+              */
+
+
+
+
+
+              //DELAY PARA DAR TEMPO  O APLICATIVO SER ABERTO, ASSIM O TESTE PODERA OCORRER NO SEU TEMPO NORMAL
+              if (cont1 < 1) {
+                  Toast.makeText(PowerTop.this, "Iniciando "+itens.get(0), Toast.LENGTH_SHORT).show();
                   startActivity(it1);
                   cont1++;
               }
@@ -561,40 +732,43 @@ public class PowerTop extends Activity implements Runnable {
                   }
 
                   atual1 = System.currentTimeMillis() - inicial1;
-                  tempoObservacao += 900;
-                  if (atual1 < tempo_escolhido) {
+                  //atual1 += 1000
+                  //tempoObservacao += 1000;
+                  tempoObservacao += 1000;
+
+                  if ((atual1 <= (tempo_escolhido*2)) && (contador_observacoes < observacao_escolhida)) {
                       NotificationManager nm = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
                       Notification n = new Notification(R.drawable.icon, "thread1 -GERAL!- 60 segundos completos", System.currentTimeMillis());
                       PendingIntent pend = PendingIntent.getActivity(this, 0, new Intent(this, UMLogger.class), 0);
                       //n.setLatestEventInfo(this, titulo, mensagem, PendingIntent);
-                      n.setLatestEventInfo(PowerTop.this, "PowerTop - Verificaçao Simples", "Tempo: " + atual1, pend);
+                      n.setLatestEventInfo(PowerTop.this, "Avaliando " + itens.get(0), "Observacões: "+contador_observacoes+"/"+observacao_escolhida, pend);
 
                       nm.notify(R.drawable.icon, n);
 
 
-
-
                       if (tempoObservacao >= (tempo_escolhido / observacao_escolhida)) {
-                          if (condicaoSalvar == true){
+                          if (condicaoSalvar == true) {
                               powerView.init(uidInfos[i], keyId, itens.get(0), 01, true);
-                          }else
+                          } else
                               powerView.init(uidInfos[i], keyId, itens.get(0), 01, false);
 
                           tempoObservacao = 0;
                       } else {
-                          if (condicaoSalvar == true){
+                          if (condicaoSalvar == true) {
                               powerView.init(uidInfos[i], keyId, itens.get(0), 01, true);
-                          }else
+                          } else
                               powerView.init(uidInfos[i], keyId, itens.get(0), 01, false);
-                          powerView.init(uidInfos[i], keyId, itens.get(0), 01, false);
+
                       }
                       sz++;
-                  } else if (atual1 >= tempo_escolhido) {
+                      //} else if (atual1 > (tempo_escolhido*2)) {
+                  }else{
                       cont4 = 0;
                       finishActivity(1);//finalizar o único aplicativo aberto
                       stopService(serviceIntent);//Finalizar a service que faz a verificação de consumo de energi, que está rodando em segundo plano
-
-                      Toast.makeText(PowerTop.this, "Abrir Tela Aplicativo Unico!", Toast.LENGTH_SHORT).show();
+                      counterService = null;//Finalizar serviço rodando em segundo plano
+                      handler = null;
+                      Toast.makeText(PowerTop.this, "Teste Finalizado! Exibindo Resultados", Toast.LENGTH_SHORT).show();
                       /// /startActivity(it);//abrir tela
                       Intent it0 = new Intent(PowerTop.this, resultados_teste_01_app.class);
                       it0.putExtra("APLICATIVO01", SomaAplicativo01);//MANDANDO SOMA DOS CONSUMOS ENERGETICOS CALCULADAS
@@ -603,12 +777,19 @@ public class PowerTop extends Activity implements Runnable {
                       startActivity(it0);
                   }
               }
+
+
+
+
+
               }else if (quantidade_apps == 02) {
+
+
 
 
               if (app == 01) {
                   if (cont1 < 1) {
-                      Toast.makeText(PowerTop.this, "Iniciando Aplicativo 01!", Toast.LENGTH_SHORT).show();
+                      Toast.makeText(PowerTop.this, "Iniciando "+itens.get(0), Toast.LENGTH_SHORT).show();
                       startActivity(it1);
                       cont1++;
                   }
@@ -619,15 +800,17 @@ public class PowerTop extends Activity implements Runnable {
                       if (cont4 < 1){
                           inicial1 = System.currentTimeMillis();
                           cont4++;
+                          contador_observacoes = 0;
                       }
                       atual1 = System.currentTimeMillis() - inicial1;
                       tempoObservacao += 1000;
-                      if (atual1 < tempo_escolhido) {
+                      //if (atual1 < tempo_escolhido) {
+                      if ((atual1 <= (tempo_escolhido*2)) && (contador_observacoes < observacao_escolhida)){
                           NotificationManager nm = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
                           Notification n = new Notification(R.drawable.icon, "thread1 -GERAL!- 60 segundos completos", System.currentTimeMillis());
                           PendingIntent pend = PendingIntent.getActivity(this, 0, new Intent(this, UMLogger.class), 0);
                           //n.setLatestEventInfo(this, titulo, mensagem, PendingIntent);
-                          n.setLatestEventInfo(PowerTop.this, "PowerTop - Condição 01", "1º APP  - Tempo: " + atual1, pend);
+                          n.setLatestEventInfo(PowerTop.this, "Avaliando "+itens.get(0),  "Observacões: "+contador_observacoes+"/"+observacao_escolhida, pend);//Notificação mostrada enquanto estiver avaliando o APP
 
                           nm.notify(R.drawable.icon, n);
 
@@ -647,7 +830,7 @@ public class PowerTop extends Activity implements Runnable {
                                   powerView.init(uidInfos[i], keyId, itens.get(0), 01, false);
                           }
                           sz++;
-                      } else if (atual1 >= tempoTotal) {
+                      } else{
                           app = 02;
                           cont4 = 0;
                           finishActivity(1);
@@ -655,7 +838,168 @@ public class PowerTop extends Activity implements Runnable {
                   }
               } else {
                   if (cont2 < 1) {//Abrir o aplicativo antes de pergar o momento inicial
-                      Toast.makeText(PowerTop.this, "Iniciando Aplicativo 02!", Toast.LENGTH_SHORT).show();
+                      Toast.makeText(PowerTop.this, "Iniciando "+ itens.get(1), Toast.LENGTH_SHORT).show();//Aviso Iniciando Aplicativo 02!
+                      startActivity(it2);
+                      cont2++;
+                  }
+                  if (cont5 < 1) {
+                      atual0 = 0;
+                      inicial2 = System.currentTimeMillis();
+                      cont5++;
+                  }
+
+                  if (atual0 <= 5000) {
+                      atual0 = System.currentTimeMillis() - inicial2;
+                  } else {
+                      if (cont4 < 1) {
+                          inicial2 = System.currentTimeMillis();
+                          cont4++;
+                          contador_observacoes = 0;
+                      }
+
+                      atual2 = System.currentTimeMillis() - inicial2;
+                      tempoObservacao += 1000;
+
+                      //if (atual2 < (tempo_escolhido + 500)) {
+                          //if (atual >= (tempoTotal/2) && (atual <= tempoTotal)){
+                     if ((atual2 <= (tempo_escolhido*2)) && (contador_observacoes < observacao_escolhida)){
+                          NotificationManager nm1 = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+                          Notification n1 = new Notification(R.drawable.icon, "thread1 -GERAL!- 60 segundos completos", System.currentTimeMillis());
+                          PendingIntent pend1 = PendingIntent.getActivity(this, 0, new Intent(this, UMLogger.class), 0);
+                          //n.setLatestEventInfo(this, titulo, mensagem, PendingIntent);
+                          n1.setLatestEventInfo(PowerTop.this, "Avaliando "+itens.get(1),  "Observacões: "+contador_observacoes+"/"+observacao_escolhida, pend1);
+                          nm1.notify(R.drawable.icon, n1);
+
+
+
+
+                          if (tempoObservacao >= ((tempo_escolhido) / observacao_escolhida)) {
+                              if (condicaoSalvar == true){
+                                  powerView.init(uidInfos[i], keyId, itens.get(1), 02, true);
+                              }else
+                                  powerView.init(uidInfos[i], keyId, itens.get(1), 02, false);
+
+                              tempoObservacao = 0;
+
+                          } else {
+                              if (condicaoSalvar == true){
+                                  powerView.init(uidInfos[i], keyId, itens.get(1), 02, true);
+                              }else
+                                  powerView.init(uidInfos[i], keyId, itens.get(1), 02, false);
+
+
+                          }
+                          //powerView.init(uidInfos[i], keyId, itens.get(1), 02);
+                          sz++;
+
+
+                      } else {
+                          finishActivity(1);
+                          NotificationManager nm = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+                          Notification n = new Notification(R.drawable.icon, "thread1 -GERAL!- 60 segundos completos", System.currentTimeMillis());
+                          PendingIntent pend = PendingIntent.getActivity(this, 0, new Intent(this, UMLogger.class), 0);
+                          //n.setLatestEventInfo(this, titulo, mensagem, PendingIntent);
+                          n.setLatestEventInfo(PowerTop.this, " Avaliação Finalizada!", "Tempo Limite Atingido!", pend);
+                          nm.notify(R.drawable.icon, n);
+                          finishActivity(1);
+
+
+                          it.putExtra("app01", SomaAplicativo01);
+                          it.putExtra("app02", SomaAplicativo02);
+                          it.putExtra("NOMES_APPS", itens);
+                          if (cont3 < 1) {
+                              stopService(serviceIntent);
+                              counterService = null;
+                                  /*super.onPause();
+                                  getApplicationContext().unbindService(conn);
+                                  handler.removeCallbacks(this);
+                                  handler = null;*/
+                              startActivity(it);
+                              Toast.makeText(PowerTop.this, "Condição. Abrir Tela Teste T", Toast.LENGTH_SHORT).show();
+                              cont3++;
+                          }
+
+
+                          //powerView.init(uidInfos[i], keyId, itens.get(1), 02);
+                          //sz++;
+                      }
+
+                  }
+              }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+              if (app == 01) {
+                  if (cont1 < 1) {
+                      Toast.makeText(PowerTop.this, "Iniciando "+itens.get(0), Toast.LENGTH_SHORT).show();
+                      startActivity(it1);
+                      cont1++;
+                  }
+
+                  if (atual0 <= 5000) {
+                      atual0 = System.currentTimeMillis() - inicial1;
+                  } else {
+                      if (cont4 < 1) {
+                          inicial1 = System.currentTimeMillis();
+                          cont4++;
+                      }
+
+                      if (contador_observacoes_APP01 <= observacao_escolhida) {
+
+                          atual1 = System.currentTimeMillis() - inicial1;
+
+                          if (atual1 <= 2500) {
+                              NotificationManager nm = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+                              Notification n = new Notification(R.drawable.icon, "thread1 -GERAL!- 60 segundos completos", System.currentTimeMillis());
+                              PendingIntent pend = PendingIntent.getActivity(this, 0, new Intent(this, UMLogger.class), 0);
+                              //n.setLatestEventInfo(this, titulo, mensagem, PendingIntent);
+                              n.setLatestEventInfo(PowerTop.this, "Avaliando " + itens.get(0), "Observações: " + contador_observacoes_APP01+" - Tempo: "+atual1, pend);//Notificação mostrada enquanto estiver avaliando o APP
+
+                              nm.notify(R.drawable.icon, n);
+
+
+                          } else if (atual1 > 2500) {
+                              if (condicaoSalvar == true) {
+                                  //powerView.init(uidInfos[i], keyId, itens.get(0), 01, true);
+                              } else
+                                  //powerView.init(uidInfos[i], keyId, itens.get(0), 01, false);
+
+                              sz++;
+                              cont4 = 0;
+                              contador_observacoes_APP01++;
+                          }
+                      }else{
+                          app = 02;
+                          cont4 = 0;
+                          finishActivity(1);
+                      }
+
+
+                  }
+
+
+              } else {
+                  if (cont2 < 1) {//Abrir o aplicativo antes de pergar o momento inicial
+                      Toast.makeText(PowerTop.this, "Iniciando "+ itens.get(1), Toast.LENGTH_SHORT).show();//Aviso Iniciando Aplicativo 02!
                       startActivity(it2);
                       cont2++;
                   }
@@ -673,23 +1017,32 @@ public class PowerTop extends Activity implements Runnable {
                           cont4++;
                       }
 
-                      atual2 = System.currentTimeMillis() - inicial2;
-                      tempoObservacao += 1000;
 
-                      if (atual2 < tempo_escolhido) {
-                          //if (atual >= (tempoTotal/2) && (atual <= tempoTotal)){
+                      if (contador_observacoes_APP02 <= observacao_escolhida) {
 
-                          NotificationManager nm1 = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-                          Notification n1 = new Notification(R.drawable.icon, "thread1 -GERAL!- 60 segundos completos", System.currentTimeMillis());
-                          PendingIntent pend1 = PendingIntent.getActivity(this, 0, new Intent(this, UMLogger.class), 0);
-                          //n.setLatestEventInfo(this, titulo, mensagem, PendingIntent);
-                          n1.setLatestEventInfo(PowerTop.this, "PowerTop - Condição 02", "2º APP - Tempo: " + atual2, pend1);
-                          nm1.notify(R.drawable.icon, n1);
+                          atual2 = System.currentTimeMillis() - inicial2;
+
+                          if (atual2 <= 2500) {
+                              NotificationManager nm = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+                              Notification n = new Notification(R.drawable.icon, "thread1 -GERAL!- 60 segundos completos", System.currentTimeMillis());
+                              PendingIntent pend = PendingIntent.getActivity(this, 0, new Intent(this, UMLogger.class), 0);
+                              //n.setLatestEventInfo(this, titulo, mensagem, PendingIntent);
+                              n.setLatestEventInfo(PowerTop.this, "Avaliando " + itens.get(1), "Observações: " + contador_observacoes_APP02+" - Tempo: "+atual2, pend);//Notificação mostrada enquanto estiver avaliando o APP
+
+                              nm.notify(R.drawable.icon, n);
 
 
+                          } else if (atual2 > 2500) {
+                              if (condicaoSalvar == true) {
+                                  //powerView.init(uidInfos[i], keyId, itens.get(1), 02, true);
+                              } else
+                                 // powerView.init(uidInfos[i], keyId, itens.get(1), 02, false);
 
+                              sz++;
+                              cont4 = 0;
+                              contador_observacoes_APP02++;
 
-                          if (tempoObservacao >= (tempo_escolhido / observacao_escolhida)) {
+                          if (tempoObservacao >= ((tempo_escolhido+500) / observacao_escolhida)) {
                               if (condicaoSalvar == true){
                                   powerView.init(uidInfos[i], keyId, itens.get(1), 02, true);
                               }else
@@ -709,13 +1062,15 @@ public class PowerTop extends Activity implements Runnable {
                           sz++;
 
 
-                      } else if (atual2 >= tempo_escolhido) {
+                          }
+
+                      }else{
                           finishActivity(1);
                           NotificationManager nm = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
                           Notification n = new Notification(R.drawable.icon, "thread1 -GERAL!- 60 segundos completos", System.currentTimeMillis());
                           PendingIntent pend = PendingIntent.getActivity(this, 0, new Intent(this, UMLogger.class), 0);
                           //n.setLatestEventInfo(this, titulo, mensagem, PendingIntent);
-                          n.setLatestEventInfo(PowerTop.this, "Finalizado!", "Tempo Limite Atingido!", pend);
+                          n.setLatestEventInfo(PowerTop.this, " Avaliação Finalizada!", "Tempo Limite Atingido!", pend);
                           nm.notify(R.drawable.icon, n);
                           finishActivity(1);
 
@@ -725,10 +1080,8 @@ public class PowerTop extends Activity implements Runnable {
                           it.putExtra("NOMES_APPS", itens);
                           if (cont3 < 1) {
                               stopService(serviceIntent);
-                                  /*super.onPause();
-                                  getApplicationContext().unbindService(conn);
-                                  handler.removeCallbacks(this);
-                                  handler = null;*/
+                              counterService = null;
+
                               startActivity(it);
                               Toast.makeText(PowerTop.this, "Condição. Abrir Tela Teste T", Toast.LENGTH_SHORT).show();
                               cont3++;
@@ -740,7 +1093,8 @@ public class PowerTop extends Activity implements Runnable {
                       }
 
                   }
-              }
+              }*/
+
           }
 
 
@@ -792,11 +1146,14 @@ public class PowerTop extends Activity implements Runnable {
   }
 
 
-//Execução da Thread Geral
+
+
+    //Execução da Thread Geral
   public void run() {
     refreshView();
     if(handler != null) {
       //Alteração Aqui - 2 anteriormente) // ALterar para salvar
+
       handler.postDelayed(this, 1 * PowerEstimator.ITERATION_INTERVAL);
     }
   }
@@ -823,7 +1180,8 @@ public class PowerTop extends Activity implements Runnable {
         new Recycler<UidPowerView>();
     private static DecimalFormat formatter = new DecimalFormat("0.0");
 
-    public static UidPowerView obtain(Activity activity, Intent startIntent) {
+
+      public static UidPowerView obtain(Activity activity, Intent startIntent) {
       UidPowerView result = recycler.obtain();
       if(result == null) return new UidPowerView(activity, startIntent);
       return result;
@@ -961,111 +1319,98 @@ public class PowerTop extends Activity implements Runnable {
       String vals, unidade;
       double valor = 0;
       double vfim;
-      if (name.equalsIgnoreCase(nomeAPP)) {
-        textView.setText(name + " + ENCONTRADO EM SEGUNDO PLANO! -- Consumo:" +uidInfo.key+ prefix + uidInfo.unit);
-        try {
-          FileWriter arq = new FileWriter("/storage/emulated/0/log_" + name + ".txt", true);
-          PrintWriter gravarArq = new PrintWriter(arq, true);
-          StringBuilder recebeValores = new StringBuilder();
 
-          vals = recebeValores.append(uidInfo.key).toString();
-          unidade = recebeValores.append(uidInfo.key + prefix + uidInfo.unit).toString();
+          if (name.equalsIgnoreCase(nomeAPP)) {
+              textView.setText(name + " + ENCONTRADO EM SEGUNDO PLANO! -- Consumo:" + uidInfo.key + prefix + uidInfo.unit);
+              try {
 
-          if(unidade.contains("m")){
-            valor = Double.valueOf(vals).doubleValue();
-            valor = valor/1000;
-              if (ini.size() == 0){
-                  vfim = valor;
-              }else {
-                  vfim = valor - temp;
-                  temp = valor;
+
+                      StringBuilder recebeValores = new StringBuilder();
+
+                      vals = recebeValores.append(uidInfo.key).toString();
+                      unidade = recebeValores.append(uidInfo.key + prefix + uidInfo.unit).toString();
+
+
+                      if (unidade.contains("m")) {
+                          valor = Double.valueOf(vals).doubleValue();
+                          valor = valor / 1000;
+                          if (ini.size() == 0) {
+                              vfim = valor;
+                          } else {
+                              vfim = valor - temp;
+                              temp = valor;
+                          }
+                          //vfim = valor - temp;
+                          //temp = valor;
+                          ini.add(vfim);
+                          //MiliJoule
+                      } else {
+                          valor = Double.valueOf(vals).doubleValue();
+                          if (ini.size() == 0) {
+                              vfim = valor;
+                          } else {
+                              vfim = valor - temp;
+                              temp = valor;
+                          }
+                          ini.add(vfim);
+                          //Joule
+                      }
+
+                      double somaConsumoTotal = 0;
+
+
+                      if (condicaoSalvar == true) {
+                          //if(ini.size() == (tempoTotal/ observacao_escolhida)) {
+                          //int tam = ini.size();
+                          //Toast.makeText(getContext(), "Salvando valores...", Toast.LENGTH_SHORT).show();
+                          for (int i = 0; i < ini.size(); i++) {
+                              somaConsumoTotal += ini.get(i);
+                          }
+                          //gravarArq.printf(Double.toString(ini.get(i))+"J\n");
+
+
+                          //CASO A CONDIÇÃO DE SALVAR SEJA SELECIONADA, VAI CRIAR O ARQUI E SALVAR NELE, CASO ELE JÁ NÃO EXISTA.
+                          FileWriter arq = new FileWriter("/storage/emulated/0/log_" + name + ".txt", true);
+                          PrintWriter gravarArq = new PrintWriter(arq, true);
+                          gravarArq.printf(Double.toString(somaConsumoTotal) + "J\n");
+
+
+                          //SomaAplicativo.add(somaConsumoTotal);
+                          if (condicao == 01) {
+                              SomaAplicativo01.add(somaConsumoTotal);
+                          } else
+                              SomaAplicativo02.add(somaConsumoTotal);
+
+                          contador_observacoes++;
+                          //Toast.makeText(getContext(), "Feito!", Toast.LENGTH_SHORT).show();
+                          ini.clear();
+                      } else {
+                          for (int i = 0; i < ini.size(); i++) {
+                              somaConsumoTotal += ini.get(i);
+                          }
+
+                          if (condicao == 01) {
+                              SomaAplicativo01.add(somaConsumoTotal);
+                          } else {
+                              SomaAplicativo02.add(somaConsumoTotal);
+                          }
+
+                          contador_observacoes++;
+                      }
+
+
+                      //gravarArq.printf(Double.toString(vfim)+"J");
+                      //Toast.makeText(getContext(), "Valor: " + vfim, Toast.LENGTH_SHORT).show();
+                      //gravarArq.printf(Double.toString(ini.get(ig))+"&");
+                      //ig++;
+                      //gravarArq.printf(vals);
+
+                  }catch(IOException e){
+                      e.printStackTrace();
+                  }
+              }else{
+                  textView.setText("Nome: " + name + " /// Consumo: " + uidInfo.key + prefix + uidInfo.unit);
               }
-            //vfim = valor - temp;
-            //temp = valor;
-            ini.add(vfim);
-            //MiliJoule
-          }else {
-            valor = Double.valueOf(vals).doubleValue();
-            if (ini.size() == 0){
-                vfim = valor;
-            }else {
-                vfim = valor - temp;
-                temp = valor;
-            }
-            ini.add(vfim);
-            //Joule
-          }
-
-          double somaConsumoTotal = 0;
-          if (condicaoSalvar == true){
-          //if(ini.size() == (tempoTotal/ observacao_escolhida)) {
-              //int tam = ini.size();
-              //Toast.makeText(getContext(), "Salvando valores...", Toast.LENGTH_SHORT).show();
-              for (int i = 0; i < ini.size(); i++) {
-                  somaConsumoTotal += ini.get(i);
-              }
-              //gravarArq.printf(Double.toString(ini.get(i))+"J\n");
-              gravarArq.printf(Double.toString(somaConsumoTotal) + "J\n");
-              //SomaAplicativo.add(somaConsumoTotal);
-              if (condicao == 01) {
-                  SomaAplicativo01.add(somaConsumoTotal);
-              } else
-                  SomaAplicativo02.add(somaConsumoTotal);
-
-              //Toast.makeText(getContext(), "Feito!", Toast.LENGTH_SHORT).show();
-              ini.clear();
-          }else{
-              for (int i = 0; i < ini.size(); i++) {
-                  somaConsumoTotal += ini.get(i);
-              }
-
-              if (condicao == 01) {
-                  SomaAplicativo01.add(somaConsumoTotal);
-              } else
-                  SomaAplicativo02.add(somaConsumoTotal);
-
-          }
-
-
-
-          //gravarArq.printf(Double.toString(vfim)+"J");
-          //Toast.makeText(getContext(), "Valor: " + vfim, Toast.LENGTH_SHORT).show();
-          //gravarArq.printf(Double.toString(ini.get(ig))+"&");
-          //ig++;
-          //gravarArq.printf(vals);
-
-        } catch (IOException e) { e.printStackTrace(); }
-      }else {
-        textView.setText("Nome: " + name + " /// Consumo: " + uidInfo.key + prefix + uidInfo.unit);
-      }
-
-      /*
-        try {
-          //File arquivo = File ("/storage/emulated/0/log_"+name+".txt");
-          FileWriter arq = new FileWriter("/storage/emulated/0/");
-
-          PrintWriter gravarArq = new PrintWriter(arq);
-          StringBuilder recebeValores = new StringBuilder();
-          //ArrayList<String> recebeValores = new ArrayList<String>();
-
-          if (arquivo.exists()){
-            BufferedReader br = new BufferedReader(new FileReader(arquivo));
-            String linha = null;
-            while ((linha = br.readLine()) != null) {
-              //b.append(Float.toString(media)).append(System.lineSeparator());
-              recebeValores.append(linha).append("\n");
-              //recebeValores.add(linha);
-              //recebeValores.add("\n");
-            }
-            recebeValores.append(uidInfo.key+ prefix + uidInfo.unit);
-              gravarArq.printf(recebeValores.toString());
-            //gravarArq.printf(uidInfo.key+ prefix + uidInfo.unit);
-          }
-
-          arq.close();
-        }catch (IOException e){
-          e.printStackTrace();
-        }*/
     }
   }
 

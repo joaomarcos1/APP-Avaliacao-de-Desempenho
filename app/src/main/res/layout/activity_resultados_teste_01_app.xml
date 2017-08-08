@@ -7,7 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="#606060"
+    android:background="#a9a9a9"
     tools:context="edu.umich.PowerTutor.ui.resultados_teste_01_app">
 
 
@@ -28,7 +28,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Média:"
         android:id="@+id/textView8"
-        android:layout_below="@+id/txt_Nome_APP_TESTE_01_APP"
+        android:layout_above="@+id/textView12"
         android:layout_alignParentLeft="true" />
 
     <TextView
@@ -38,7 +38,7 @@
         android:text="Variância:"
         android:id="@+id/textView12"
         android:textSize="10pt"
-        android:layout_below="@+id/textView8"
+        android:layout_above="@+id/textView13"
         android:layout_alignParentLeft="true" />
 
     <TextView
@@ -47,7 +47,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Desvio Padrão:"
         android:id="@+id/textView13"
-        android:layout_below="@+id/textView12"
+        android:layout_above="@+id/chart_teste_01_app"
         android:layout_alignParentLeft="true" />
 
     <TextView
@@ -82,40 +82,59 @@
 
 
     <com.github.mikephil.charting.charts.BarChart
+        android:layout_marginTop="10dp"
         android:id="@+id/chart_teste_01_app"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_below="@+id/textView13"
+        android:layout_height="240dp"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="20dp"
-        android:layout_above="@+id/btn_voltar_teste_01_app" />
+        android:layout_above="@+id/btn_voltar_teste_01_app"
+        android:background="#f3f3f3" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/button_blue"
         android:text="@string/voltar_tela_teste_01app"
         android:id="@+id/btn_voltar_teste_01_app"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="10dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true" />
-<!--
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Salvar Gráfico"
-        android:id="@+id/btn_Salvamento_Grafico"
-        android:layout_above="@+id/btn_Salvamento_Relatorio"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true" />
 
-    <Button
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Salvar Relatório"
-        android:id="@+id/btn_Salvamento_Relatorio"
-        android:layout_above="@+id/btn_voltar_teste_01_app"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true" />-->
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Consumo Total:"
+        android:id="@+id/textView2"
+        android:layout_above="@+id/textView8"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:textSize="8pt"
+        android:id="@+id/txt_Consumo_Total_APP_Teste_01_APP"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_alignLeft="@+id/txt_media_teste_01_APP" />
+    <!--
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Salvar Gráfico"
+            android:id="@+id/btn_Salvamento_Grafico"
+            android:layout_above="@+id/btn_Salvamento_Relatorio"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Salvar Relatório"
+            android:id="@+id/btn_Salvamento_Relatorio"
+            android:layout_above="@+id/btn_voltar_teste_01_app"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true" />-->
 
 </RelativeLayout>

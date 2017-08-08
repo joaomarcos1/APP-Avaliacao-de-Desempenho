@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "463216354131",
+    "firebase_url": "https://bancoobs.firebaseio.com",
+    "project_id": "bancoobs",
+    "storage_bucket": "bancoobs.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:463216354131:android:50bd40255efad7df",
+        "android_client_info": {
+          "package_name": "edu.umich.PowerTutor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "463216354131-u2r3mok5ctgp3bitsfll35q7kv881d4a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBulBx1DBQ7GVzgw_md0I9NpAc8XiGSRKo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

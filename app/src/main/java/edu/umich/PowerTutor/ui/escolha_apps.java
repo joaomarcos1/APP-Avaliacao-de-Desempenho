@@ -41,11 +41,11 @@ public class escolha_apps extends Activity{
 
     public static final CharSequence[] TEMPOS = { "Testes","1 MINUTO", "2 MINUTOS", "3 MINUTOS", "5 MINUTOS", "8 MINUTOS", "15 MINUTOS"};
 
-    public static final CharSequence[] INTERVALOS = {"Testes", "1", "3", "5", "7", "8", "10", "15", "30", "40", "50", "60"};
+    public static final CharSequence[] INTERVALOS = {"1", "2", "3", "5", "7", "8", "10", "15", "30", "40", "50", "60", "80", "90", "100"};
 
 
     int tempo_valores[] = {10000, 60000, 120000, 180000, 300000, 480000, 900000};
-    int obsevacoes_valores[] = {2, 1, 3, 5, 7, 8, 10, 15, 30, 40, 50, 60};
+    int obsevacoes_valores[] = {1, 2, 3, 5, 7, 8, 10, 15, 30, 40, 50, 60, 80, 90, 100};
 
     int tempo_escolhido;
     int observacao_escolhida;
@@ -183,7 +183,7 @@ public class escolha_apps extends Activity{
 
     public boolean onCreateOptionsMenu(Menu menu) {
         menu.add(0, MENU1, 0, "Definir Execução");
-        menu.add(0, MENU2, 0, "Preferências Adicionais");
+        //menu.add(0, MENU2, 0, "Preferências Adicionais");
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -196,7 +196,7 @@ public class escolha_apps extends Activity{
                 return true;
             case 1:
                 //Toast.makeText(escolha_apps.this, "Selecionado Opção 2", Toast.LENGTH_LONG).show();
-                showDialog(2);
+                //showDialog(2);
                 return true;
 
             case 2:
@@ -211,8 +211,8 @@ public class escolha_apps extends Activity{
     protected Dialog onCreateDialog(int id) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         switch(id) {
-            case 0:
-                builder.setTitle("Tempo Total de Execução para Cada APP");
+            /*case 0:
+                builder.setTitle("Tempo Total de Execução para Cada APP - Testes nova alteração");
                 //builder.setItems(TEMPOS,
                 builder.setItems(TEMPOS, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int item) {
@@ -222,21 +222,26 @@ public class escolha_apps extends Activity{
 
                     }
                 });
-                return builder.create();
+                return builder.create();*/
 
-            case 1:
+            case 0:
                 builder.setTitle("Quantidade de Observações");
                 builder.setItems(INTERVALOS, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int item) {
                         //prefs.edit().putInt("topWindowType", item).commit();
+                        tempo_escolhido = obsevacoes_valores[item];
+                        tempo_escolhido *= 1000;
+                        tempo_escolhido += 400;
+                        Toast.makeText(escolha_apps.this, "Tempo escolhido: "+tempo_escolhido, Toast.LENGTH_SHORT).show();
+                        //observacao_escolhida = obsevacoes_valores[item];
                         observacao_escolhida = obsevacoes_valores[item];
                         Toast.makeText(escolha_apps.this, "Intervalo Escolhido: "+observacao_escolhida, Toast.LENGTH_SHORT).show();
                     }
                 });
                 return builder.create();
             case 2:
-                Intent it = new Intent (escolha_apps.this, preferencias_execucao_teste.class);
-                startActivity(it);
+                //Intent it = new Intent (escolha_apps.this, preferencias_execucao_teste.class);
+                //startActivity(it);
         }
         return null;
     }

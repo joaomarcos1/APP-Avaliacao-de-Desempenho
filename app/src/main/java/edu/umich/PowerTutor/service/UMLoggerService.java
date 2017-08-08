@@ -146,10 +146,10 @@ public class UMLoggerService extends Service{
     int icon = R.drawable.level;   
         
     // icon from resources
-    CharSequence tickerText = "PowerTutor";              // ticker-text
+    CharSequence tickerText = "APP_Compare";              // ticker-text
     long when = System.currentTimeMillis();         // notification time
     Context context = getApplicationContext();      // application Context
-    CharSequence contentTitle = "PowerTutor";  // expanded message title
+    CharSequence contentTitle = "APP_Compare";  // expanded message title
     CharSequence contentText = "";      // expanded message text
 
     Intent notificationIntent = new Intent(this, UMLogger.class);
@@ -219,8 +219,10 @@ public class UMLoggerService extends Service{
       }
     }
 
-    CharSequence contentTitle = "PowerTutor";
-    CharSequence contentText = "Total Power: " + (int)Math.round(totalPower) +
+
+    //Alteração na notificação de SEgundo plano
+    CharSequence contentTitle = "APP_Compare";
+    CharSequence contentText = "Energia Total: " + (int)Math.round(totalPower) +
                                " mW";
 
     /* When the user selects the notification the tab view for global power

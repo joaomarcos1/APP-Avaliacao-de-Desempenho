@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
@@ -31,9 +32,7 @@ import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
 import com.github.mikephil.charting.listener.OnChartGestureListener;
 import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
 import com.github.mikephil.charting.utils.ColorTemplate;
-import com.google.android.gms.appindexing.Action;
-import com.google.android.gms.appindexing.AppIndex;
-import com.google.android.gms.common.api.GoogleApiClient;
+
 import com.itextpdf.text.Chunk;
 import com.itextpdf.text.Image;
 import com.itextpdf.text.Document;
@@ -81,6 +80,7 @@ public class resultados_teste_01_app extends Activity {
     private LineChart mChart;
 
     private TextView txt_Nome_APP;
+    private TextView txt_Consumo_Total;
 
     //private Button Salvar_Grafico_Imagem;
     //private Button SalvarRelatorio;
@@ -101,6 +101,7 @@ public class resultados_teste_01_app extends Activity {
         varianciaAPP01 = (TextView) findViewById(R.id.variancia_teste_01_APP);
         desvioPadraoAPP01 = (TextView) findViewById(R.id.txt_Desvio_Padrao_Teste_01_APP);
         txt_Nome_APP = (TextView) findViewById(R.id.txt_Nome_APP_TESTE_01_APP);
+        txt_Consumo_Total = (TextView) findViewById(R.id.txt_Consumo_Total_APP_Teste_01_APP);
 
         //Salvar_Grafico_Imagem = (Button) findViewById(R.id.btn_Salvamento_Grafico);
         //SalvarRelatorio = (Button) findViewById(R.id.btn_Salvamento_Relatorio);
@@ -146,6 +147,8 @@ public class resultados_teste_01_app extends Activity {
             @Override
             public void onClick(View view) {
                 finish();
+                Intent it = new Intent(resultados_teste_01_app.this, UMLogger.class);
+                startActivity(it);
             }
         });
 
@@ -170,11 +173,18 @@ public class resultados_teste_01_app extends Activity {
         formatt.setMaximumIntegerDigits(3);
         formatt.setRoundingMode(RoundingMode.HALF_UP);*/
 
+        double consumoTotal = 0;
+        for (int i = 0; i < somaAPP01.size(); i++){
+            consumoTotal += somaAPP01.get(i);
+        }
 
-        mediaAPP01.setText(Double.toString(mediaAplicativo01));
+
+        float auxMedia = (float) mediaAplicativo01;
+
+        mediaAPP01.setText(Double.toString(auxMedia));
         varianciaAPP01.setText(Double.toString(variancia01));
         desvioPadraoAPP01.setText(Double.toString(desvioPadrao01));
-
+        txt_Consumo_Total.setText(Double.toString(consumoTotal)+ "J");
 
         //GRÁFICO de BARRA - MÉTODO OnCreate
 
@@ -194,8 +204,8 @@ public class resultados_teste_01_app extends Activity {
         BarDataSet dataSet = new BarDataSet(entrada, "Consumo Aplicativo");
 
         ArrayList<String> legends = new ArrayList<String>();
-        for (int i = 0; i < somaAPP01.size() + 1; i++) {
-            legends.add("obs" + i);
+        for (int i = 0; i < somaAPP01.size(); i++) {
+            legends.add("obs" + (i+1));
         }
 
         BarData dados = new BarData(legends, dataSet);

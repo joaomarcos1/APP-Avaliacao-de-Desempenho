@@ -9,11 +9,14 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.style.BackgroundColorSpan;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 /*
@@ -21,6 +24,9 @@ import com.jjoe64.graphview.GraphView;
 import com.jjoe64.graphview.series.BarGraphSeries;
 import com.jjoe64.graphview.series.DataPojint;(*/
 
+import com.firebase.client.DataSnapshot;
+import com.firebase.client.FirebaseError;
+import com.firebase.client.ValueEventListener;
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.charts.CandleStickChart;
 import com.github.mikephil.charting.charts.LineChart;
@@ -34,10 +40,13 @@ import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.utils.ColorTemplate;
-import com.google.android.gms.appindexing.Action;
-import com.google.android.gms.appindexing.AppIndex;
-import com.google.android.gms.auth.api.credentials.internal.SaveRequest;
-import com.google.android.gms.common.api.GoogleApiClient;
+
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.analytics.FirebaseAnalytics;
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.itextpdf.text.Chunk;
 import com.itextpdf.text.Document;
 import com.itextpdf.text.Image;
@@ -65,6 +74,8 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 import edu.umich.PowerTutor.R;
 
@@ -88,10 +99,31 @@ public class graficos_resultados extends Activity {
 
     ArrayList<String> nomesAPPS = new ArrayList<String>();
 
+
+
+    //DATABASE
+
+
+    private FirebaseDatabase database;
+    private DatabaseReference databaseReference;
+    private ArrayList<Message> messagesList = new ArrayList<Message>();
+    private ListView main_listview;
+    private MainAdapter mainAdapter;
+    private FirebaseAnalytics mFirebaseAnalytics;
+    private String test_string;
+    private String username;
+    private graficos_resultados mContext;
+    private TextView textView_is_typing;
+
+    String app1, app2;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_graficos_resultados);
+
 
 
         voltar = (Button) findViewById(R.id.btn_voltar_tela_graficos);
@@ -111,8 +143,8 @@ public class graficos_resultados extends Activity {
             public void onClick(View view) {
                 nomeImagem01 = "grap1"+ System.currentTimeMillis();
                 nomeImagem02 = "grap2"+ System.currentTimeMillis();
-                nomeImagem03 = "grap" + System.currentTimeMillis();
-                if (barChart.saveToGallery(nomeImagem01, 50) && candleStickChart.saveToGallery(nomeImagem02, 50) && barChar2.saveToGallery(nomeImagem03, 50)) {
+                nomeImagem03 = "grap3" + System.currentTimeMillis();
+                if (barChart.saveToGallery(nomeImagem01, 150) && candleStickChart.saveToGallery(nomeImagem02, 150) && barChar2.saveToGallery(nomeImagem03, 150)) {
 
                     Toast.makeText(getApplicationContext(), "Saving SUCCESSFUL!",
                             Toast.LENGTH_SHORT).show();
@@ -123,6 +155,8 @@ public class graficos_resultados extends Activity {
         });
 
         SalvarRelatorio = (Button) findViewById(R.id.btn_Salvar_Relatorios__TesteT);
+
+
         SalvarRelatorio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -329,12 +363,12 @@ public class graficos_resultados extends Activity {
         //2º Passo
         BarDataSet dataSet = new BarDataSet(entrada, nomesAPPS.get(0));
 
-        ArrayList<String> legends = new ArrayList<String>();
+        ArrayList<String> legends1 = new ArrayList<String>();
         for (int i = 0; i < somasAPP01.size(); i++){
-            legends.add("obs"+i);
+            legends1.add("obs"+ (i+1));
         }
 
-        BarData dados = new BarData(legends, dataSet);
+        BarData dados = new BarData(legends1, dataSet);
 
         //3º Passo
 
@@ -351,15 +385,156 @@ public class graficos_resultados extends Activity {
             entrada2.add(new BarEntry(somasAPP02.get(i).floatValue(), i));
         }
 
+        ArrayList<String> legends2 = new ArrayList<String>();
+        for (int i = 0; i < somasAPP02.size(); i++){
+            legends2.add("obs"+ (i+1));
+        }
+
+
         BarDataSet dataSet2 = new BarDataSet(entrada2, nomesAPPS.get(1));
 
-        BarData dados2 = new BarData(legends, dataSet2);
+        BarData dados2 = new BarData(legends2, dataSet2);
 
         barChar2.setData(dados2);
         barChar2.setDescription("Consumo Energético "+nomesAPPS.get(1));
         barChar2.animateY(2000);
         barChar2.invalidate();
 
+
+
+
+        // Botão Enviar para NUVEM
+
+
+        mContext = graficos_resultados.this;
+
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
+
+        mFirebaseAnalytics.setUserProperty("user_type", "author");
+
+        Button button_send = (Button) findViewById(R.id.button_send);
+        //editText_message = (EditText) findViewById(R.id.editText_message);
+        //textView_is_typing = (TextView) findViewById(R.id.textView_is_typing);
+        //main_listview = (ListView) findViewById(R.id.main_listview);
+        username = getSharedPreferences("PREFS", 0).getString("username", "Anonymous");
+        //textView_is_typing.setVisibility(View.INVISIBLE);
+
+        database = FirebaseDatabase.getInstance();
+        databaseReference = database.getReference();
+
+        mainAdapter = new MainAdapter(mContext, messagesList);
+        //main_listview.setAdapter(mainAdapter);
+
+        test_string = null;
+
+        button_send.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View view) {
+
+                databaseReference.child("room-typing").child("irc").child(username).setValue(false);
+
+
+                process_message();
+                //editText_message.setText("Mensagem Fixa");
+            }
+        });
+
+        databaseReference.child("users").child(MyUtils.generateUniqueUserId(mContext)).addValueEventListener(new com.google.firebase.database.ValueEventListener() {
+            @Override public void onDataChange(com.google.firebase.database.DataSnapshot dataSnapshot) {
+                username = dataSnapshot.getValue(String.class);
+                if (username == null) {
+                    username = "Anonymous";
+                }
+            }
+
+            @Override public void onCancelled(DatabaseError databaseError) {
+            }
+        });
+
+        //------------------------------------------------------------
+        databaseReference.child("db_messages").limitToLast(20).addChildEventListener(new ChildEventListener() {
+            @Override
+            public void onChildAdded(com.google.firebase.database.DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onChildChanged(com.google.firebase.database.DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onChildRemoved(com.google.firebase.database.DataSnapshot dataSnapshot) {
+
+            }
+
+            @Override
+            public void onChildMoved(com.google.firebase.database.DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+
+            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+                Message message = dataSnapshot.getValue(Message.class);
+                messagesList.add(message);
+                mainAdapter.notifyDataSetChanged();
+                Log.d("message", message.toString());
+            }
+
+            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+                Log.d("onChildChanged", dataSnapshot.toString());
+            }
+
+
+            public void onChildRemoved(DataSnapshot dataSnapshot) {
+                Log.d("onChildRemoved", dataSnapshot.toString());
+            }
+
+            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+                Log.d("onChildMoved", dataSnapshot.toString());
+            }
+
+        });
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+    private void process_message() {
+
+        String message2 = "";
+        String message3 = "";
+        //String ap1 = app1;
+        //String ap2 = app1;
+
+        for(int i = 0; i < somasAPP01.size(); i++){
+            message2 = message2 + somasAPP01.get(i) + "&";
+        }
+        for(int i = 0; i < somasAPP02.size(); i++){
+            message3 = message3 + somasAPP02.get(i) + "&";
+        }
+
+        //sends the db to the server.
+
+        String username = "Anonimo";
+        String key = databaseReference.child("db_messages").push().getKey();
+        Message post = new Message(MyUtils.generateUniqueUserId(mContext), username, message2, message3, app1, app2, System.currentTimeMillis() / 1000L);
+        Map<String, Object> postValues = post.toMap();
+        Map<String, Object> childUpdates = new HashMap<String, Object>();
+        childUpdates.put("/db_messages/" + key, postValues);
+        databaseReference.updateChildren(childUpdates);
     }
 
 
